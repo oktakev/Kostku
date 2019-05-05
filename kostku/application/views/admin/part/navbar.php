@@ -1,0 +1,212 @@
+<div class="navbar navbar-expand-md navbar-dark">
+		<div class="navbar-brand wmin-0 mr-5">
+			<a href="#" class="d-inline-block">
+				<!-- <img src="https://kost.loveyourcode.com/public/global_assets/images/logo_light.png" alt=""> -->
+			</a>
+		</div>
+
+		<div class="d-md-none">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-mobile">
+				<i class="icon-tree5"></i>
+			</button>
+		</div>
+
+		<div class="collapse navbar-collapse" id="navbar-mobile">
+			
+
+			<ul class="navbar-nav ml-auto">
+			
+
+			
+
+				<li class="nav-item dropdown dropdown-user">
+					<a href="#" class="navbar-nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown">
+						<i class="fas fa-user mr-2" height="34" alt=""></i>
+						<span>Admin</span>
+					</a>
+
+					<div class="dropdown-menu dropdown-menu-right">
+						<!-- <a href="#" class="dropdown-item"><i class="icon-user-plus"></i> My profile</a>
+					
+						<a href="#" class="dropdown-item"><i class="icon-cog5"></i> Account settings</a> -->
+						<a href="https://kost.loveyourcode.com/logout" class="dropdown-item"><i class="icon-switch2"></i> Logout</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- /main navbar	<!-- Secondary navbar -->
+	<div class="navbar navbar-expand-md navbar-light">
+		<div class="text-center d-md-none w-100">
+			<button type="button" class="navbar-toggler dropdown-toggle" data-toggle="collapse" data-target="#navbar-navigation">
+				<i class="icon-unfold mr-2"></i>
+				Navigation
+			</button>
+		</div>
+
+		<div class="navbar-collapse collapse" id="navbar-navigation">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a href="" class="navbar-nav-link active">
+						<i class="fas fa-home mr-2"></i>
+						Dashboard
+					</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a href="" class="navbar-nav-link ">
+						<i class="fas fa-users mr-2"></i>
+						Manajemen Penghuni
+					</a>
+
+
+				</li>
+
+				<li class="nav-item dropdown">
+					<a href="#" class="navbar-nav-link dropdown-toggle" data-toggle="dropdown" >
+						<i class="fas fa-book mr-2"></i>
+						Pembukuan
+					</a>
+
+
+					<div class="dropdown-menu">
+
+					<a href="" class="dropdown-item "><i class="fas fa-folder-plus"></i> Buat Pembukuan Baru</a>
+					<a href="" class="dropdown-item "><i class="fas fa-book-open"></i> Daftar Pembukuan</a>
+					</div>
+				</li>
+				<li class="nav-item dropdown">
+					<a href="#" class="navbar-nav-link dropdown-toggle " data-toggle="dropdown">
+						<i class="fas fa-money-check-alt mr-2"></i>
+						Pembayaran
+					</a>
+
+
+					<div class="dropdown-menu">
+
+						<a href="" class="dropdown-item "><i class="far fa-credit-card"></i>  Pembayaran Baru</a>
+						<a href="" class="dropdown-item "><i class="fas fa-list-ol"></i> List Pembayaran</a>
+						<a href="" class="dropdown-item "><i class="fas fa-search"></i> Monitor Pembayaran</a>
+					</div>
+				</li>
+				<li class="nav-item dropdown">
+					<a href="#" class="navbar-nav-link dropdown-toggle " data-toggle="dropdown">
+						<i class="fas fa-cart-arrow-down mr-2"></i>
+						Pengeluaran
+					</a>
+
+
+					<div class="dropdown-menu">
+
+						<a href="" class="dropdown-item "><i class="far fa-credit-card"></i>  Pengeluaran Fix </a>
+						<a href="" class="dropdown-item "><i class="fas fa-list-ol"></i> Pengeluaran Variable</a>
+						<a href="" class="dropdown-item "><i class="fas fa-search"></i> Monitor Pengeluaran</a>
+						
+					</div>
+				</li>
+			
+
+				<li class="nav-item nav-item-levels mega-menu-full">
+					<a href="#" class="navbar-nav-link   dropdown-toggle" data-toggle="dropdown">
+						<i class="fas fa-object-group mr-2"></i>
+						Master Data
+					</a>
+
+					<div class="dropdown-menu dropdown-content">
+						<div class="dropdown-content-body">
+
+							<div class="row">
+								
+								<div class="col-md-3">
+									<div class="font-size-sm line-height-sm font-weight-semibold text-uppercase mt-1">Manajemen Kamar</div>
+									<div class="dropdown-divider mb-2"></div>
+									<div class="dropdown-item-group mb-3 mb-md-0">
+										<ul class="list-unstyled">
+											<li><a href="" class="dropdown-item rounded"><i class="fas fa-building"></i>Data Kamar</a></li>
+											<li>
+												<a href="" class="dropdown-item rounded">
+													<i class="fas fa-layer-group"></i> Data Lantai
+												</a>
+											</li>
+											
+										</ul>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="font-size-sm line-height-sm font-weight-semibold text-uppercase mt-1">
+										Pengaturan Kost
+									</div>
+									<div class="dropdown-divider mb-2"></div>
+									<div class="dropdown-item-group mb-3 mb-md-0">
+										<ul class="list-unstyled">
+											<li>
+												<a href="" class="dropdown-item rounded">
+													<i class="fas fa-money-check-alt"></i> Pengaturan Biaya Kost & Lain - Lain
+												</a>
+											</li>
+											<!-- <li><a href="https://kost.loveyourcode.com/pengaturan/biaya-fasilitas" class="dropdown-item rounded"><i class="icon-coins"></i> Biaya Fasilitas</a></li> -->
+											
+										</ul>
+									</div>
+								</div>
+								
+								
+								
+							</div>
+
+						</div>
+					</div>
+				</li>
+				<li class="nav-item dropdown">
+					<a href="#" class="navbar-nav-link dropdown-toggle " data-toggle="dropdown">
+						<i class="fas fa-clipboard-list"></i>
+						Laporan
+					</a>
+
+					<div class="dropdown-menu">
+						<a href="" class="dropdown-item "><i class="fas fa-clipboard"></i> Rekapitulasi Bulanan</a>
+						<a href="" class="dropdown-item "><i class="fas fa-align-center"></i> Laporan Penghuni</a>
+						<!-- <a href="../seed/layout_boxed.html" class="dropdown-item "><i class="icon-align-center-horizontal"></i> Laporan Tahunan</a> -->
+
+
+					<!-- 	<div class="dropdown-header">Basic layouts</div>
+						<div class="dropdown-submenu">
+							<a href="#" class="dropdown-item dropdown-item-open dropdown-toggle"><i class="icon-grid2"></i> Sidebars</a>
+							<div class="dropdown-menu">
+								<a href="../seed/sidebar_none.html" class="dropdown-item active">No sidebar</a>
+								<a href="../seed/sidebar_main.html" class="dropdown-item">1 sidebar</a>
+								<div class="dropdown-submenu">
+									<a href="#" class="dropdown-item dropdown-toggle">2 sidebars</a>
+									<div class="dropdown-menu">
+										<a href="../seed/sidebar_secondary.html" class="dropdown-item">Secondary sidebar</a>
+										<a href="../seed/sidebar_right.html" class="dropdown-item">Right sidebar</a>
+									</div>
+								</div>
+								<div class="dropdown-submenu">
+									<a href="#" class="dropdown-item dropdown-toggle">3 sidebars</a>
+									<div class="dropdown-menu">
+										<a href="../seed/sidebar_right_hidden.html" class="dropdown-item">Right sidebar hidden</a>
+										<a href="../seed/sidebar_right_visible.html" class="dropdown-item">Right sidebar visible</a>
+									</div>
+								</div>
+								<a href="../seed/sidebar_sections.html" class="dropdown-item">Sectioned sidebar</a>
+								<a href="../seed/sidebar_stretched.html" class="dropdown-item">Stretched sidebar</a>
+							</div>
+
+
+						</div> -->
+						
+						
+					</div>
+				</li>
+
+					
+				
+				
+			</ul>
+
+			<ul class="navbar-nav ml-md-auto">
+			
+
+		</div>
+	</div>
+	<!-- /secondary navbar -->
