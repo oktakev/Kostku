@@ -1,15 +1,13 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<!-- /theme JS files -->
-
-		
+        <head>
+            <?php $this->load->view("admin/part/head.php") ?>
 		</head>
 
 <body>
 
-
+<?php $this->load->view("admin/part/navbar.php") ?>
 	
 	<!-- Page header -->
 	<div class="page-header">
@@ -173,32 +171,16 @@
 	</div>
 	<!-- /page content -->
 	<!-- Footer -->
-	<div class="navbar navbar-expand-lg navbar-light">
-		<div class="text-center d-lg-none w-100">
-			<button type="button" class="navbar-toggler dropdown-toggle" data-toggle="collapse" data-target="#navbar-footer">
-				<i class="icon-unfold mr-2"></i>
-				Footer
-			</button>
-		</div>
-
-		<div class="navbar-collapse collapse" id="navbar-footer">
-			<span class="navbar-text">
-				&copy; 2019. <a href="#">Built</a> with <a href="http://themeforest.net/user/Kopyov" target="_blank">Love</a>
-			</span>
-
-		
-		</div>
-	</div>
+	   <?php $this->load->view("admin/part/footer.php") ?>
 	<!-- /footer -->
-		<script type="text/javascript" src="assets/js/jquery.number.js"></script>
+    <?php $this->load->view("admin/part/js.php") ?>
+    <!--js-->
 <script type="text/javascript">
-
 	$(document).ready(function(){
 		$('.number-angka').number(true);
 	})
 </script>
-<script src="assets/js/highcharts.js"></script>
-<script src="assets/js/highcharts-3d.js"></script>
+
 <script>
      $('#container2').highcharts({
 // 		Highcharts.chart('container2', {
