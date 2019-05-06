@@ -63,15 +63,15 @@
 
 				<li class="nav-item dropdown">
 					<a href="#" class="navbar-nav-link dropdown-toggle" data-toggle="dropdown" >
-						<i class="fas fa-book mr-2"></i>
-						Pembukuan
+						<i class="fas fa-utensils mr-2"></i>
+						Sarapan
 					</a>
 
 
 					<div class="dropdown-menu">
 
-					<a href="" class="dropdown-item "><i class="fas fa-folder-plus"></i> Buat Pembukuan Baru</a>
-					<a href="" class="dropdown-item "><i class="fas fa-book-open"></i> Daftar Pembukuan</a>
+					<a href="" class="dropdown-item "><i class="fas fa-folder-plus"></i> Menu Sarapan</a>
+					<a href="" class="dropdown-item "><i class="fas fa-book-open"></i> Daftar Pesanan</a>
 					</div>
 				</li>
 				<li class="nav-item dropdown">
@@ -83,8 +83,8 @@
 
 					<div class="dropdown-menu">
 
-						<a href="" class="dropdown-item "><i class="far fa-credit-card"></i>  Pembayaran Baru</a>
-						<a href="" class="dropdown-item "><i class="fas fa-list-ol"></i> List Pembayaran</a>
+						<a href="" class="dropdown-item "><i class="far fa-credit-card"></i>  Pembayaran Sarapan</a>
+						<a href="" class="dropdown-item "><i class="fas fa-list-ol"></i> Pembayaran Kost</a>
 						<a href="" class="dropdown-item "><i class="fas fa-search"></i> Monitor Pembayaran</a>
 					</div>
 				</li>
@@ -159,12 +159,12 @@
 				<li class="nav-item dropdown">
 					<a href="#" class="navbar-nav-link dropdown-toggle " data-toggle="dropdown">
 						<i class="fas fa-clipboard-list"></i>
-						Laporan
+						Fasilitas
 					</a>
 
 					<div class="dropdown-menu">
-						<a href="" class="dropdown-item "><i class="fas fa-clipboard"></i> Rekapitulasi Bulanan</a>
-						<a href="" class="dropdown-item "><i class="fas fa-align-center"></i> Laporan Penghuni</a>
+						<a href="" class="dropdown-item "><i class="fas fa-clipboard"></i> Daftar Fasilitas</a>
+						<a href="" class="dropdown-item "><i class="fas fa-align-center"></i> Laporan Fasilitas</a>
 						<!-- <a href="../seed/layout_boxed.html" class="dropdown-item "><i class="icon-align-center-horizontal"></i> Laporan Tahunan</a> -->
 
 
