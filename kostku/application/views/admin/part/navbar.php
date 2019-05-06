@@ -123,7 +123,7 @@
 										<ul class="list-unstyled">
 											<li><a href="" class="dropdown-item rounded"><i class="fas fa-building"></i>Data Kamar</a></li>
 											<li>
-												<a href="" class="dropdown-item rounded">
+												<a href="<?php echo base_url('admin/lantai'); ?>" class="dropdown-item rounded">
 													<i class="fas fa-layer-group"></i> Data Lantai
 												</a>
 											</li>
