@@ -76,7 +76,7 @@
 				<div class="card">
 					<ul class="nav nav-tabs nav-tabs-highlight mb-0">
 						<li class="nav-item"><a href="#bordered-tab1" class="nav-link active" data-toggle="tab">
-						Form Lantai</a></li>
+						Edit Lantai</a></li>
 					</ul>
 					<div class="tab-content card card-body border-top-0 rounded-top-0 mb-0">
 					<div class="tab-pane fade show active" id="bordered-tab1">				
@@ -94,16 +94,20 @@
 										<div class="collapse show" id="demo1">
 											<div class="form-group">
 												<label>Nama Lantai:</label>
+												<input type="hidden" name="id" value="<?php echo $u->data_lantai_id ?>">
 												<input 
 													type="text" 
 													name="nama_lantai" 
 													class="form-control" 
-													placeholder="Nama Lantai">
+													placeholder="Nama Lantai"
+													value="<?php echo $u->nama_lantai ?>">
 											</div>
 										</div>
 									</fieldset>
 									<div class="text-right">
-										  <button type="button" class="btn btn-primary">Tambah<i class="icon-paperplane ml-2"></i></button>
+										 <button type="button" class="btn btn-primary">Tambah<i class="icon-paperplane ml-2"></i></button>
+
+										 <a href=""><button type="button" class="btn btn-default">Cancel <i class="icon-arrow-left8 ml-2"></i></button></a>
 									</div>
 								</form>
 							</div>

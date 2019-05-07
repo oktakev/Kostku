@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-md navbar-dark">
 		<div class="navbar-brand wmin-0 mr-5">
 			<a href="#" class="d-inline-block">
-				<!-- <img src="https://kost.loveyourcode.com/public/global_assets/images/logo_light.png" alt=""> -->
+				
 			</a>
 		</div>
 
@@ -21,7 +21,7 @@
 
 				<li class="nav-item dropdown dropdown-user">
 					<a href="#" class="navbar-nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown">
-						<i class="fas fa-user mr-2" height="34" alt=""></i>
+						<i class="icon-user mr-2" height="34" alt=""></i>
 						<span>Admin</span>
 					</a>
 
@@ -48,13 +48,13 @@
 			<ul class="navbar-nav">
 				<li class="nav-item">
 					<a href="" class="navbar-nav-link active">
-						<i class="fas fa-home mr-2"></i>
+						<i class="icon-home4 mr-2"></i>
 						Dashboard
 					</a>
 				</li>
 				<li class="nav-item dropdown">
 					<a href="" class="navbar-nav-link ">
-						<i class="fas fa-users mr-2"></i>
+						<i class="icon-users4 mr-2"></i>
 						Manajemen Penghuni
 					</a>
 
@@ -70,13 +70,13 @@
 
 					<div class="dropdown-menu">
 
-					<a href="" class="dropdown-item "><i class="fas fa-folder-plus"></i> Menu Sarapan</a>
-					<a href="" class="dropdown-item "><i class="fas fa-book-open"></i> Daftar Pesanan</a>
+					<a href="" class="dropdown-item "><i class="icon-file-plus"></i> Menu Sarapan</a>
+					<a href="" class="dropdown-item "><i class="icon-books"></i> Daftar Pesanan</a>
 					</div>
 				</li>
 				<li class="nav-item dropdown">
 					<a href="#" class="navbar-nav-link dropdown-toggle " data-toggle="dropdown">
-						<i class="fas fa-money-check-alt mr-2"></i>
+						<i class="icon-cash3 mr-2"></i>
 						Pembayaran
 					</a>
 
@@ -90,7 +90,7 @@
 				</li>
 				<li class="nav-item dropdown">
 					<a href="#" class="navbar-nav-link dropdown-toggle " data-toggle="dropdown">
-						<i class="fas fa-cart-arrow-down mr-2"></i>
+						<i class="icon-calculator2 mr-2"></i>
 						Pengeluaran
 					</a>
 
@@ -107,7 +107,7 @@
 
 				<li class="nav-item nav-item-levels mega-menu-full">
 					<a href="#" class="navbar-nav-link   dropdown-toggle" data-toggle="dropdown">
-						<i class="fas fa-object-group mr-2"></i>
+						<i class="icon-make-group mr-2"></i>
 						Master Data
 					</a>
 
@@ -121,10 +121,10 @@
 									<div class="dropdown-divider mb-2"></div>
 									<div class="dropdown-item-group mb-3 mb-md-0">
 										<ul class="list-unstyled">
-											<li><a href="" class="dropdown-item rounded"><i class="fas fa-building"></i>Data Kamar</a></li>
+											<li><a href="" class="dropdown-item rounded"><i class="icon-office"></i>Data Kamar</a></li>
 											<li>
 												<a href="<?php echo base_url('admin/lantai'); ?>" class="dropdown-item rounded">
-													<i class="fas fa-layer-group"></i> Data Lantai
+													<i class="icon-stack2"></i> Data Lantai
 												</a>
 											</li>
 											
@@ -140,10 +140,9 @@
 										<ul class="list-unstyled">
 											<li>
 												<a href="" class="dropdown-item rounded">
-													<i class="fas fa-money-check-alt"></i> Pengaturan Biaya Kost & Lain - Lain
+													<i class="icon-cash"></i> Pengaturan Biaya Kost & Lain - Lain
 												</a>
 											</li>
-											<!-- <li><a href="https://kost.loveyourcode.com/pengaturan/biaya-fasilitas" class="dropdown-item rounded"><i class="icon-coins"></i> Biaya Fasilitas</a></li> -->
 											
 										</ul>
 									</div>

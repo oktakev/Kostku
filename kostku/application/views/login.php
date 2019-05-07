@@ -33,7 +33,7 @@
                                 <?php endif; ?>
                                 
                             <div class="text-center mb-3">
-                                <i class="far fa-building text-slate-300 border-slate-300 border-3 rounded-round p-3 mb-3 mt-1" style="font-size: 30px"></i>
+                                <i class="icon-city icon-2x text-slate-300 border-slate-300 border-3 rounded-round p-3 mb-3 mt-1" style="font-size: 30px"></i>
                                 <h5 class="mb-0">Login</h5>
                                 <span class="d-block text-muted">Sistem Informasi Kostku</span>
                             </div>
@@ -45,7 +45,7 @@
                                     placeholder="Username"
                                     name="username">
                                 <div class="form-control-feedback">
-                                    <i class="fas fa-user text-muted"></i>
+                                    <i class="icon-user text-muted"></i>
                                 </div>
                             </div>
 
@@ -63,7 +63,7 @@
                             
 
                             <div class="form-group">
-                                <button type="submit" class="btn btn-primary btn-block">Login<i class="fas fa-chevron-circle-right ml-2"></i></button>
+                                <button type="submit" class="btn btn-primary btn-block">Login<i class="icon-circle-right2 ml-2 ml-2"></i></button>
                             </div>
                         <div class="form-group">
                                 <b>Username: admin</b> <br/>

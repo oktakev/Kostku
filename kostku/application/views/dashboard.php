@@ -43,7 +43,7 @@
 						<div class="card card-body">
 							<div class="media">
 								<div class="mr-3 align-self-center">
-									<i class="fas fa-restroom fa-lg text-info-400" style="font-size: 40px"></i>
+									<i class="icon-man-woman icon-3x text-info-400" style="font-size: 40px"></i>
 								</div>
 
 								<div class="media-body text-right">
@@ -58,7 +58,7 @@
 						<div class="card card-body">
 							<div class="media">
 								<div class="mr-3 align-self-center">
-									<i class="fas fa-male fa-lg text-danger-400" style="font-size: 40px"></i>
+									<i class="icon-people icon-3x text-danger-400" style="font-size: 40px"></i>
 								</div>
 
 								<div class="media-body text-right">
@@ -82,7 +82,7 @@
 								</div>
 
 								<div class="ml-3 align-self-center">
-									<i class="fas fa-bed fa-lg text-indigo-400" style="font-size: 40px"></i>
+									<i class="icon-bed2 icon-3x text-indigo-400" style="font-size: 40px"></i>
 								</div>
 							</div>
 						</div>
@@ -101,7 +101,7 @@
                                 </div>
 
                                 <div class="ml-3 align-self-center">
-                                    <i class="fas fa-money-check-alt fa-lg text-info-400" style="font-size: 40px"></i>
+                                    <i class="icon-cash3 icon-3x text-info-400" style="font-size: 40px"></i>
                                 </div>
                             </div>
                         </div>
@@ -117,7 +117,7 @@
                                 </div>
 
                                 <div class="ml-3 align-self-center">
-                                    <i class="fas fa-hand-holding-usd" fa-lg text-info-400" style="font-size: 40px"></i>
+                                    <i class="icon-cart5 icon-3x text-dark-400" fa-lg text-info-400" style="font-size: 40px"></i>
                                 </div>
                             </div>
                         </div>
@@ -133,7 +133,7 @@
                                 </div>
 
                                 <div class="ml-3 align-self-center">
-                                    <i class="fas fa-wallet fa-lg text-success-400" style="font-size: 40px"></i>
+                                    <i class="icon-wallet icon-3x text-success-400" style="font-size: 40px"></i>
                                 </div>
                             </div>
                         </div>
