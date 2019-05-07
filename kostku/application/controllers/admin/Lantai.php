@@ -10,7 +10,7 @@ class Lantai extends CI_Controller{
 
 	function index(){
 		$data['lantai'] = $this->m_lantai->tampil_data()->result();
-		$this->load->view('admin/v_lantai',$data);
+		$this->load->view('admin/lantai/v_lantai',$data);
 	}
 	
 	function tambah_aksi(){
@@ -26,7 +26,7 @@ class Lantai extends CI_Controller{
 	function edit($id){
 	$where = array('data_lantai_id' => $id);
 	$data['lantai'] = $this->m_lantai->edit_data($where,'lantai')->result();
-	$this->load->view('admin/v_edit_lantai',$data);
+	$this->load->view('admin/lantai/v_edit_lantai',$data);
 	}
 	
 	function hapus($id){
