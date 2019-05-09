@@ -81,7 +81,7 @@
 					<div class="tab-content card card-body border-top-0 rounded-top-0 mb-0">
 					<div class="tab-pane fade show active" id="bordered-tab1">				
 					<div class="card-body">
-									<form action="<?php echo base_url(). 'admin/lantai/tambah_aksi'; ?>" method="post">
+									<form action="<?php echo base_url(). 'admin/lantai/update'; ?>" method="post">
 									<fieldset>
 										<legend class="font-weight-semibold text-uppercase font-size-sm">
 											<i class="icon-reading mr-2"></i>
@@ -91,10 +91,10 @@
 											</a>
 										</legend>
 
+												<input type="hidden" name="id" value="<?php echo $u->data_lantai_id ?>">
 										<div class="collapse show" id="demo1">
 											<div class="form-group">
 												<label>Nama Lantai:</label>
-												<input type="hidden" name="id" value="<?php echo $u->data_lantai_id ?>">
 												<input 
 													type="text" 
 													name="nama_lantai" 
@@ -105,7 +105,7 @@
 										</div>
 									</fieldset>
 									<div class="text-right">
-										 <button type="button" class="btn btn-primary">Tambah<i class="icon-paperplane ml-2"></i></button>
+										 <button type="button" class="btn btn-primary">Update<i class="icon-paperplane ml-2"></i></button>
 
 										 <a href=""><button type="button" class="btn btn-default">Cancel <i class="icon-arrow-left8 ml-2"></i></button></a>
 									</div>
