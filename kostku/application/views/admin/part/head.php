@@ -16,3 +16,4 @@
 <link href="<?php echo base_url('assets/css/components.min.css') ?>" rel="stylesheet">
 <link href="<?php echo base_url('assets/css/colors.min.css') ?>" rel="stylesheet">
 <link href="<?php echo base_url('assets/fontawesome/css/all.min.css') ?>" rel="stylesheet">
+<link href="<?php echo base_url('assets/css/datatables.min.css') ?>" rel="stylesheet">

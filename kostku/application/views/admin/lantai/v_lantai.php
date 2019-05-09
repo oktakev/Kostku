@@ -43,23 +43,22 @@
 							</tr>
 						</thead>
 						<tbody>
-															<tr>
-		<?php 
-		$no = 1;
-		foreach($lantai as $u){ 
-		?>
-		<tr>
-			<td><?php echo $no++ ?></td>
-			<td><?php echo $u->nama_lantai ?></td>
-			<td>
-				<?php echo anchor('admin/lantai/edit/'.$u->data_lantai_id,'<button class="btn btn-primary"><i class="icon-pencil7"></i></button>'); ?>
+						<?php 
+						$no = 1;
+						foreach($lantai as $u){ 
+						?>
+						<tr>
+							<td><?php echo $no++ ?></td>
+							<td><?php echo $u->nama_lantai ?></td>
+							<td>
+								<?php echo anchor('admin/lantai/edit/'.$u->data_lantai_id,'<button class="btn btn-primary"><i class="icon-pencil7"></i></button>'); ?>
 
-				<?php echo anchor('admin/lantai/hapus/'.$u->data_lantai_id,'<button class="btn btn-danger"><i class="icon-trash"></i></button>'); ?>
-				
-				
-			</td>
-		</tr>
-		<?php } ?>
+								<?php //echo anchor('admin/lantai/hapus/'.$u->data_lantai_id,'<button class="btn btn-danger"><i class="icon-trash"></i></button>'); ?>
+								
+								
+							</td>
+						</tr>
+						<?php } ?>
 									
 														
 						</tbody>
@@ -132,7 +131,8 @@
 			<!-- Theme JS files -->
 			<?php $this->load->view("admin/part/js.php") ?>
 	<script type="text/javascript">
-	
+		$(document).ready(function(){
+
 		    $('#user-lists').DataTable({
 		    	autoWidth: false,
 		    	columnDefs: [
@@ -144,6 +144,7 @@
 			],
             dom: '<"datatable-header"fl><"datatable-scroll"t><"datatable-footer"ip>'
 		    });
+		})
 	
 	</script>
 
