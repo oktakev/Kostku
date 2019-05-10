@@ -162,7 +162,7 @@
 					</a>
 
 					<div class="dropdown-menu">
-						<a href="" class="dropdown-item "><i class="fas fa-clipboard"></i> Daftar Fasilitas</a>
+						<a href="<?php echo base_url('admin/fasilitas'); ?>" class="dropdown-item "><i class="fas fa-clipboard"></i> Daftar Fasilitas</a>
 						<a href="" class="dropdown-item "><i class="fas fa-align-center"></i> Laporan Fasilitas</a>
 						<!-- <a href="../seed/layout_boxed.html" class="dropdown-item "><i class="icon-align-center-horizontal"></i> Laporan Tahunan</a> -->
 
