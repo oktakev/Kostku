@@ -47,15 +47,17 @@
 						<tbody>
 						<?php 
 						$no = 1;
-						foreach($lantai as $u){ 
+						foreach ($query as $row){
 						?>
 						<tr>
 							<td><?php echo $no++ ?></td>
-							<td><?php echo $u->nama_lantai ?></td>
+							<td><?php echo $row->nama_lantai ?></td>
+							<td><?php echo $row->no_kamar ?></td>
+							<td><?php echo $row->status ?></td>
 							<td>
-								<?php echo anchor('admin/lantai/edit/'.$u->data_lantai_id,'<button class="btn btn-primary"><i class="icon-pencil7"></i></button>'); ?>
+								<?php echo anchor('admin/kamar/edit/'.$row->data_lantai_id,'<button class="btn btn-primary"><i class="icon-pencil7"></i></button>'); ?>
 
-								<?php echo anchor('admin/lantai/hapus/'.$u->data_lantai_id,'<button class="btn btn-danger"><i class="icon-trash"></i></button>'); ?>
+								<?php //echo anchor('admin/lantai/hapus/'.$u->data_lantai_id,'<button class="btn btn-danger"><i class="icon-trash"></i></button>'); ?>
 								
 								
 							</td>
