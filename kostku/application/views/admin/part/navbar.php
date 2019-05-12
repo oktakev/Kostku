@@ -121,7 +121,7 @@
 									<div class="dropdown-divider mb-2"></div>
 									<div class="dropdown-item-group mb-3 mb-md-0">
 										<ul class="list-unstyled">
-											<li><a href="" class="dropdown-item rounded"><i class="icon-office"></i>Data Kamar</a></li>
+											<li><a href="<?php echo base_url('admin/kamar'); ?>" class="dropdown-item rounded"><i class="icon-office"></i>Data Kamar</a></li>
 											<li>
 												<a href="<?php echo base_url('admin/lantai'); ?>" class="dropdown-item rounded">
 													<i class="icon-stack2"></i> Data Lantai

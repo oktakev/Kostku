@@ -25,7 +25,7 @@
 		<div class="col-md-6">
 				<div class="card">
 					<div class="card-header bg-transparent header-elements-inline">
-						<h6 class="card-title">List Lantai</h6>
+						<h6 class="card-title">List Kamar</h6>
 
 						<div class="header-elements">
 						
@@ -38,28 +38,31 @@
 						<thead>
 							<tr>
 								<th>No</th>
-								<th>Nama Lantai</th>
+								<th>Lantai Kamar</th>
+								<th>Nomer Kamar</th>
+								<th>Status</th>
 								<th>Action</th>
 							</tr>
 						</thead>
 						<tbody>
-															<tr>
-		<?php 
-		$no = 1;
-		foreach($lantai as $u){ 
-		?>
-		<tr>
-			<td><?php echo $no++ ?></td>
-			<td><?php echo $u->nama_lantai ?></td>
-			<td>
-				<?php echo anchor('admin/lantai/edit/'.$u->data_lantai_id,'<button class="btn btn-primary"><i class="icon-pencil7"></i></button>'); ?>
+						<?php 
+						$no = 1;
+						foreach ($query as $row){
+						?>
+						<tr>
+							<td><?php echo $no++ ?></td>
+							<td><?php echo $row->nama_lantai ?></td>
+							<td><?php echo $row->no_kamar ?></td>
+							<td><span class="text-danger"><?php echo $row->status ?></span></td>
+							<td>
+								<?php echo anchor('admin/kamar/edit/'.$row->data_kamar_id,'<button class="btn btn-primary"><i class="icon-pencil7"></i></button>'); ?>
 
-				<?php //echo anchor('admin/lantai/hapus/'.$u->data_lantai_id,'<button class="btn btn-danger"><i class="icon-trash"></i></button>'); ?>
-				
-				
-			</td>
-		</tr>
-		<?php } ?>
+								<?php //echo anchor('admin/kamar/hapus/'.$row->data_lantai_id,'<button class="btn btn-danger"><i class="icon-trash"></i></button>'); ?>
+								
+								
+							</td>
+						</tr>
+						<?php } ?>
 									
 														
 						</tbody>
@@ -76,16 +79,17 @@
 				<div class="card">
 					<ul class="nav nav-tabs nav-tabs-highlight mb-0">
 						<li class="nav-item"><a href="#bordered-tab1" class="nav-link active" data-toggle="tab">
-						Edit Lantai</a></li>
+						Form Kamar</a></li>
 					</ul>
 					<div class="tab-content card card-body border-top-0 rounded-top-0 mb-0">
 					<div class="tab-pane fade show active" id="bordered-tab1">				
 					<div class="card-body">
-									<form action="<?php echo base_url(). 'admin/lantai/tambah_aksi'; ?>" method="post">
+									<form action="<?php echo base_url(). 'admin/kamar/tambah_aksi'; ?>" method="post">
+									<input type="hidden" name="id" value="<?php echo $row->data_kamar_id ?>">
 									<fieldset>
 										<legend class="font-weight-semibold text-uppercase font-size-sm">
 											<i class="icon-reading mr-2"></i>
-											Lantai Form
+											Kamar Form
 											<a class="float-right text-default" data-toggle="collapse" data-target="#demo2">
 												<i class="icon-circle-down2"></i>
 											</a>
@@ -93,21 +97,37 @@
 
 										<div class="collapse show" id="demo1">
 											<div class="form-group">
-												<label>Nama Lantai:</label>
-												<input type="hidden" name="id" value="<?php echo $u->data_lantai_id ?>">
+												<label>Pilih Lantai:</label>
+												 <select class="form-control">
+										            <?php 
+										            foreach($groups as $row){ 
+										              echo '<option value="'.$row->nama_lantai.'">'.$row->nama_lantai.'</option>';
+										            }
+										            ?>
+										            </select>
+											</div>
+										</div>
+
+											<div class="form-group">
+												<label>Nomor Kamar:</label>
 												<input 
 													type="text" 
-													name="nama_lantai" 
+													name="no_kamar" 
 													class="form-control" 
-													placeholder="Nama Lantai"
-													value="<?php echo $u->nama_lantai ?>">
+													placeholder="Nomor Lantai">
+											</div>
+											<div class="form-group">
+												<label>Status:</label>
+												<input 
+													type="text" 
+													name="status" 
+													class="form-control" 
+													placeholder="Status Kamar">
 											</div>
 										</div>
 									</fieldset>
 									<div class="text-right">
-										 <button type="button" class="btn btn-primary">Tambah<i class="icon-paperplane ml-2"></i></button>
-
-										 <a href=""><button type="button" class="btn btn-default">Cancel <i class="icon-arrow-left8 ml-2"></i></button></a>
+										  <button type="button" class="btn btn-primary">Tambah<i class="icon-paperplane ml-2"></i></button>
 									</div>
 								</form>
 							</div>
@@ -136,7 +156,8 @@
 			<!-- Theme JS files -->
 			<?php $this->load->view("admin/part/js.php") ?>
 	<script type="text/javascript">
-	
+		$(document).ready(function(){
+
 		    $('#user-lists').DataTable({
 		    	autoWidth: false,
 		    	columnDefs: [
@@ -148,6 +169,7 @@
 			],
             dom: '<"datatable-header"fl><"datatable-scroll"t><"datatable-footer"ip>'
 		    });
+		})
 	
 	</script>
 

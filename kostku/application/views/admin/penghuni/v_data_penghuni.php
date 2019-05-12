@@ -57,7 +57,7 @@
 						<tbody>
 						<?php 
 						$no = 1;
-						foreach($data_penghuni as $u){ 
+						foreach($query as $u){ 
 						?>
 						<tr>
 							<td><?php echo $no++ ?></td>
@@ -65,12 +65,12 @@
 							<td><?php echo $u->no_ktp ?></td>
 							<td><?php echo $u->alamat ?></td>
 							<td><?php echo $u->no_hp ?></td>
-							<td><?php echo $u->data_kamar_id ?></td>
-							<td><?php echo $u->biaya_kost_id ?></td>
-							<span class="label label-success"><td><?php echo $u->status ?></td></span>
+							<td><?php echo $u->no_kamar ?></td>
+							<td><?php echo $u->biaya ?></td>
+							<td><span class="badge badge-success"><?php echo $u->status ?></span></td>
 
 							<td>
-								<?php echo anchor('admin/lantai/edit/'.$u->data_penghuni_id,'<button class="btn btn-primary"><i class="icon-pencil7"></i></button>'); ?>
+								<?php echo anchor('admin/penghuni/edit/'.$u->data_penghuni_id,'<button class="btn btn-primary"><i class="icon-pencil7"></i></button>'); ?>
 
 								<?php //echo anchor('admin/lantai/hapus/'.$u->data_lantai_id,'<button class="btn btn-danger"><i class="icon-trash"></i></button>'); ?>
 								

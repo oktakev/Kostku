@@ -9,7 +9,8 @@ class Penghuni extends CI_Controller{
 	}
 
 	function index(){
-		$data['data_penghuni'] = $this->m_penghuni->tampil_data()->result();
+		$this->load->model('m_penghuni');
+		$data['query'] = $this->m_penghuni->myjoin();
 		$this->load->view('admin/penghuni/v_data_penghuni',$data);
-	}
+		}
 }
