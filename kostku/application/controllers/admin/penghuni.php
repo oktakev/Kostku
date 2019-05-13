@@ -13,4 +13,14 @@ class Penghuni extends CI_Controller{
 		$data['query'] = $this->m_penghuni->myjoin();
 		$this->load->view('admin/penghuni/v_data_penghuni',$data);
 		}
+	function edit($id){
+		$where = array('data_penghuni_id' => $id);
+		$data['query'] = $this->m_penghuni->myjoin();
+		$this->load->view('admin/penghuni/v_edit_penghuni',$data);
+	}
+	function hapus($id){
+		$where = array('data_kamar_id' => $id);
+		$this->m_kamar->hapus_data($where,'kamar');
+		redirect('admin/kamar/index');
+	}
 }
