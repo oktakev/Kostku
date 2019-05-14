@@ -53,7 +53,22 @@
 							<td><?php echo $no++ ?></td>
 							<td><?php echo $row->nama_lantai ?></td>
 							<td><?php echo $row->no_kamar ?></td>
-							<td><span class="badge badge-danger"><?php echo $row->status ?></span></td>
+							<td>
+								<?php   
+									$status = $row->status;
+									if ($status == "Ditempati") {
+									 	echo '<span class="badge badge-danger">';
+									 	echo $row->status;
+									 	echo '</span>';
+									} 
+
+									else if($status == "Kosong"){
+									 	echo '<span class="badge badge-success">';
+									 	echo $row->status;
+									 	echo '</span>';
+									}
+								?>
+							</td>
 							<td>
 								<?php echo anchor('admin/kamar/edit/'.$row->data_kamar_id,'<button class="btn btn-primary"><i class="icon-pencil7"></i></button>'); ?>
 
@@ -117,11 +132,16 @@
 											</div>
 											<div class="form-group">
 												<label>Status:</label>
-												<input 
+												<select class="form-control" name="status">
+													<option value="">---Pilih Status---</option>
+													<option>Ditempati</option>
+													<option>Kosong</option>
+												</select>
+												<!-- <input 
 													type="text" 
 													name="status" 
 													class="form-control" 
-													placeholder="Status Kamar">
+													placeholder="Status Kamar"> -->
 											</div>
 										</div>
 									</fieldset>

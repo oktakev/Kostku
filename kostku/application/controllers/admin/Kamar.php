@@ -40,4 +40,11 @@ class Kamar extends CI_Controller{
 		$this->m_kamar->hapus_data($where,'kamar');
 		redirect('admin/kamar/index');
 	}
+	function rupiah($angka){
+	$hasil_rupiah = number_format($angka,2,',','.');
+	return $hasil_rupiah;
+	
+	echo rupiah(1000000);
+	}
+
 }

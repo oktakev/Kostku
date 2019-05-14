@@ -67,7 +67,20 @@
 							<td><?php echo $u->no_hp ?></td>
 							<td><?php echo $u->no_kamar ?></td>
 							<td><?php echo $u->biaya ?></td>
-							<td><span class="badge badge-success"><?php echo $u->status ?></span></td>
+							<td><?php   
+									$status = $u->status;
+									if ($status == "Sudah Keluar") {
+									 	echo '<span class="badge badge-danger">';
+									 	echo $u->status;
+									 	echo '</span>';
+									} 
+
+									else if($status == "Aktif"){
+									 	echo '<span class="badge badge-success">';
+									 	echo $u->status;
+									 	echo '</span>';
+									}
+								?></td>
 
 							<td>
 								<?php echo anchor('admin/penghuni/edit/'.$u->data_penghuni_id,'<button class="btn btn-primary"><i class="icon-pencil7"></i></button>'); ?>
@@ -133,6 +146,7 @@
 		})
 	
 	</script>
+	
 
 </body>
 </html>
