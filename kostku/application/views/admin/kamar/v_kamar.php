@@ -97,10 +97,10 @@
 										<div class="collapse show" id="demo1">
 											<div class="form-group">
 												<label>Pilih Lantai:</label>
-												 <select class="form-control">
+												 <select class="form-control" name="data_lantai_id">
 										            <?php 
 										            foreach($groups as $row){ 
-										              echo '<option value="'.$row->nama_lantai.'">'.$row->nama_lantai.'</option>';
+										              echo '<option value="'.$row->data_lantai_id.'">'.$row->nama_lantai.'</option>';
 										            }
 										            ?>
 										            </select>
@@ -126,8 +126,8 @@
 										</div>
 									</fieldset>
 									<div class="text-right">
-										<input type="submit" value="Tambah">
-										  <!--<button type="button" class="btn btn-primary">Tambah<i class="icon-paperplane ml-2"></i></button>-->
+										<!--<button type="button" class="btn btn-primary">Tambah<i class="icon-paperplane ml-2"></i></button>-->
+										<input type="submit" name="Tambah">
 									</div>
 								</form>
 							</div>

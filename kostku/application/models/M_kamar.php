@@ -13,7 +13,7 @@ class M_kamar extends CI_Model{
     
     function getAllGroups()
     {
-        $query = $this->db->query('SELECT nama_lantai FROM lantai');
+        $query = $this->db->query('SELECT data_lantai_id, nama_lantai FROM lantai');
         return $query->result();
 	}
 
