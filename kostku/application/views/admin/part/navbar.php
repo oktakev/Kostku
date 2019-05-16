@@ -98,7 +98,7 @@
 					<div class="dropdown-menu">
 
 						<a href="" class="dropdown-item "><i class="far fa-credit-card"></i>  Pengeluaran Fix </a>
-						<a href="" class="dropdown-item "><i class="fas fa-list-ol"></i> Pengeluaran Variable</a>
+						<a href="<?php echo base_url('admin/pengeluaran'); ?>" class="dropdown-item "><i class="fas fa-list-ol"></i> Pengeluaran Barang</a>
 						<a href="" class="dropdown-item "><i class="fas fa-search"></i> Monitor Pengeluaran</a>
 						
 					</div>

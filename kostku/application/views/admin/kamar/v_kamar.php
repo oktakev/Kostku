@@ -52,7 +52,7 @@
 						<tr>
 							<td><?php echo $no++ ?></td>
 							<td><?php echo $row->nama_lantai ?></td>
-							<td><?php echo $row->no_kamar ?></td>
+							<td><?php echo $this->libkamar->format($row->no_kamar) ?></td>
 							<td>
 								<?php   
 									$status = $row->status;
@@ -146,8 +146,8 @@
 										</div>
 									</fieldset>
 									<div class="text-right">
-										<!--<button type="button" class="btn btn-primary">Tambah<i class="icon-paperplane ml-2"></i></button>-->
-										<input type="submit" name="Tambah">
+										<button type="button" class="btn btn-primary">Tambah<i class="icon-paperplane ml-2"></i></button>
+										<!--<input type="submit" name="Tambah">-->
 									</div>
 								</form>
 							</div>

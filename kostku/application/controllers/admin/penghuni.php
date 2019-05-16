@@ -9,10 +9,12 @@ class Penghuni extends CI_Controller{
 	}
 
 	function index(){
+		$this->load->library("lib");
+		$this->load->library("libkamar");
 		$this->load->model('m_penghuni');
 		$data['query'] = $this->m_penghuni->myjoin();
 		$this->load->view('admin/penghuni/v_data_penghuni',$data);
-		}
+	}
 	function edit($id){
 		$where = array('data_penghuni_id' => $id);
 		$data['query'] = $this->m_penghuni->myjoin();
@@ -23,9 +25,4 @@ class Penghuni extends CI_Controller{
 		$this->m_kamar->hapus_data($where,'kamar');
 		redirect('admin/kamar/index');
 	}
-	function rupiah($angka){
-	$hasil_rupiah = number_format($angka,2,',','.');
-	return $hasil_rupiah;
-	echo rupiah(1000000);
-}
 }

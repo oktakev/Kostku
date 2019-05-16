@@ -52,12 +52,27 @@
 						<tr>
 							<td><?php echo $no++ ?></td>
 							<td><?php echo $row->nama_lantai ?></td>
-							<td><?php echo $row->no_kamar ?></td>
-							<td><span class="text-danger"><?php echo $row->status ?></span></td>
+							<td><?php //echo $this->libkamar->format($row->no_kamar) ?></td>
+							<td>
+								<?php   
+									$status = $row->status;
+									if ($status == "Ditempati") {
+									 	echo '<span class="badge badge-danger">';
+									 	echo $row->status;
+									 	echo '</span>';
+									} 
+
+									else if($status == "Kosong"){
+									 	echo '<span class="badge badge-success">';
+									 	echo $row->status;
+									 	echo '</span>';
+									}
+								?>
+							</td>
 							<td>
 								<?php echo anchor('admin/kamar/edit/'.$row->data_kamar_id,'<button class="btn btn-primary"><i class="icon-pencil7"></i></button>'); ?>
 
-								<?php //echo anchor('admin/kamar/hapus/'.$row->data_lantai_id,'<button class="btn btn-danger"><i class="icon-trash"></i></button>'); ?>
+								<?php echo anchor('admin/kamar/hapus/'.$row->data_kamar_id,'<button class="btn btn-danger"><i class="icon-trash"></i></button>'); ?>
 								
 								
 							</td>
@@ -84,8 +99,8 @@
 					<div class="tab-content card card-body border-top-0 rounded-top-0 mb-0">
 					<div class="tab-pane fade show active" id="bordered-tab1">				
 					<div class="card-body">
-									<form action="<?php echo base_url(). 'admin/kamar/tambah_aksi'; ?>" method="post">
-									<input type="hidden" name="id" value="<?php echo $row->data_kamar_id ?>">
+									<form action="<?php echo base_url(). 'admin/kamar/update'; ?>" method="post">
+										<input type="hidden" name="id" value="<?php echo $row->data_kamar_id ?>">
 									<fieldset>
 										<legend class="font-weight-semibold text-uppercase font-size-sm">
 											<i class="icon-reading mr-2"></i>
@@ -98,10 +113,10 @@
 										<div class="collapse show" id="demo1">
 											<div class="form-group">
 												<label>Pilih Lantai:</label>
-												 <select class="form-control">
+												 <select class="form-control" name="data_lantai_id">
 										            <?php 
 										            foreach($groups as $row){ 
-										              echo '<option value="'.$row->nama_lantai.'">'.$row->nama_lantai.'</option>';
+										              echo '<option value="'.$row->data_lantai_id.'">'.$row->nama_lantai.'</option>';
 										            }
 										            ?>
 										            </select>
@@ -114,20 +129,27 @@
 													type="text" 
 													name="no_kamar" 
 													class="form-control" 
-													placeholder="Nomor Lantai">
+													placeholder="Nomor Lantai"
+													value="<?php echo $row->no_kamar ?>">
 											</div>
 											<div class="form-group">
 												<label>Status:</label>
-												<input 
+												<select class="form-control" name="status">
+													<option value="">---Pilih Status---</option>
+													<option>Ditempati</option>
+													<option>Kosong</option>
+												</select>
+												<!-- <input 
 													type="text" 
 													name="status" 
 													class="form-control" 
-													placeholder="Status Kamar">
+													placeholder="Status Kamar"> -->
 											</div>
 										</div>
 									</fieldset>
 									<div class="text-right">
-										  <button type="button" class="btn btn-primary">Tambah<i class="icon-paperplane ml-2"></i></button>
+										<button type="button" class="btn btn-primary">Tambah<i class="icon-paperplane ml-2"></i></button>
+										<!--<input type="submit" name="Tambah">-->
 									</div>
 								</form>
 							</div>

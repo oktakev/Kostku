@@ -65,8 +65,8 @@
 							<td><?php echo $u->no_ktp ?></td>
 							<td><?php echo $u->alamat ?></td>
 							<td><?php echo $u->no_hp ?></td>
-							<td><?php echo $u->no_kamar ?></td>
-							<td><?php echo $u->biaya ?></td>
+							<td><?php echo $this->libkamar->format($u->no_kamar) ?></td>
+							<td><?php echo $this->lib->rupiah($u->biaya) ?></td>
 							<td><?php   
 									$status = $u->status;
 									if ($status == "Sudah Keluar") {

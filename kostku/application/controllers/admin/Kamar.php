@@ -9,6 +9,7 @@ class Kamar extends CI_Controller{
 	}
 
 	function index(){
+		$this->load->library("libkamar");
 		$this->load->model('m_kamar');
 		$data['query'] = $this->m_kamar->myjoin();
 		$data['groups'] = $this->m_kamar->getAllGroups();
