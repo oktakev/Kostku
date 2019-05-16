@@ -114,11 +114,7 @@
 											<div class="form-group">
 												<label>Pilih Lantai:</label>
 												 <select class="form-control" name="data_lantai_id">
-										            <?php 
-										            foreach($groups as $row){ 
-										              echo '<option value="'.$row->data_lantai_id.'">'.$row->nama_lantai.'</option>';
-										            }
-										            ?>
+										            <option><?php echo $row->nama_lantai ?></option>
 										            </select>
 											</div>
 										</div>
@@ -135,9 +131,7 @@
 											<div class="form-group">
 												<label>Status:</label>
 												<select class="form-control" name="status">
-													<option value="">---Pilih Status---</option>
-													<option>Ditempati</option>
-													<option>Kosong</option>
+													<option><?php echo $row->status ?></option>
 												</select>
 												<!-- <input 
 													type="text" 

@@ -42,13 +42,17 @@
 
 			<div class="tab-content card card-body border-top-0 rounded-top-0 mb-0">
 				<div class="tab-pane fade show active" id="bordered-tab1">
-
+<?php 
+		foreach($pengeluaran_barang as $p){ 
+		?>
+	<?php } ?>
 					<div class="card-body">
 						<form 
 						action="<?php echo base_url(). 'admin/pengeluaran/tambah_aksi'; ?>" 
 						method="post"
 						enctype="multipart/form-data"
 						>
+						<input type="hidden" name="id" value="<?php echo $p->pengeluaran_barang_id ?>">
 						<fieldset>
 							<legend class="font-weight-semibold text-uppercase font-size-sm">
 								<i class="icon-paste4 mr-2"></i>
@@ -61,17 +65,14 @@
 							<div class="collapse show" id="demo1">
 								<div class="form-group">
 									<label>Kategori:</label>
-									<select name="kategori" class="form-control">
-										<option value="">---Pilih Kategori---</option>
-										<option>Pembayaran Listrik</option>
-										<option>Pembelanjaan Barang</option>
-																				
+									<select name="kategori" class="form-control" value="">
+										<option><?php echo $p->kategori ?></option>		
 									</select>
 								</div>
 								
 								<div class="form-group">
 									<label>Keterangan Pengeluaran :</label>
-									<textarea class="form-control" name="keterangan" placeholder="Keterangan Pengeluaran" required=""></textarea>
+									<textarea class="form-control" name="keterangan" placeholder="Keterangan Pengeluaran" required=""><?php echo $p->keterangan ?></textarea>
 									
 								</div>
 								<div class="form-group">
@@ -82,6 +83,7 @@
 									class="form-control" 
 									placeholder="Biaya"
 									required="" 
+									value="<?php echo $p->biaya ?>" 
 									>
 								</div>
 								<div class="form-group">
@@ -96,6 +98,7 @@
 										class="form-control daterange-single" 
 										required="" 
 										name="tanggal"
+										value="<?php echo $p->tanggal ?>" 
 										>
 									</div>
 								</div>

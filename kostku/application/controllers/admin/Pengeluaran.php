@@ -9,27 +9,30 @@ class Pengeluaran extends CI_Controller{
 	}
 
 	function index(){
-		$data['pengeluaran'] = $this->m_pengeluaran->tampil_data()->result();
+		$data['pengeluaran_barang'] = $this->m_pengeluaran->tampil_data()->result();
 		$this->load->view('admin/pengeluaran/v_pengeluaran_barang',$data);
 	}
 	
 	function tambah_aksi(){
-		$nama_pengeluaran = $this->input->post('nama_pengeluaran');
+		$kategori = $this->input->post('kategori');
+		$keterangan = $this->input->post('keterangan');
+		$biaya = $this->input->post('biaya');
+		$tanggal = $this->input->post('tanggal');
 		
 		$data = array(
-			'kategori' => $nama_pengeluaran,
-			'keterangan'=> $kategori,
+			'kategori' => $kategori,
+			'keterangan'=> $keterangan,
 			'biaya' => $biaya,
 			'tanggal' => $tanggal
 			);
-		$this->m_pengeluaran->input_data($data,'pengeluaran');
+		$this->m_pengeluaran->input_data($data,'pengeluaran_barang');
 		redirect('admin/pengeluaran/index');
 	}
 	
 	function edit($id){
-	$where = array('v_pengeluaran_barang_id' => $id);
-	$data['pengeluaran'] = $this->m_pengeluaran->edit_data($where,'pengeluaran')->result();
-	$this->load->view('admin/pengeluaran/v_edit_pengeluaran_barang',$data);
+	$where = array('pengeluaran_barang_id' => $id);
+	$data['pengeluaran_barang'] = $this->m_pengeluaran->edit_data($where,'pengeluaran_barang')->result();
+	$this->load->view('admin/pengeluaran/v_edit_barang',$data);
 	}
 
 	function hapus($id){
