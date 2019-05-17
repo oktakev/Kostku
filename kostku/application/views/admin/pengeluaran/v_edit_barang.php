@@ -202,7 +202,7 @@
 							<td>
 								<?php echo anchor('admin/pengeluaran/edit/'.$p->pengeluaran_barang_id,'<button class="btn btn-primary"><i class="icon-pencil7"></i></button>'); ?>
 
-								<?php //echo anchor('admin/kamar/hapus/'.$row->data_lantai_id,'<button class="btn btn-danger"><i class="icon-trash"></i></button>'); ?>
+								<?php echo anchor('admin/pengeluaran/hapus/'.$p->pengeluaran_barang_id,'<button class="btn btn-danger"><i class="icon-trash"></i></button>'); ?>
 								
 								
 							</td>

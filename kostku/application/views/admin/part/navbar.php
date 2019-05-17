@@ -70,7 +70,7 @@
 
 					<div class="dropdown-menu">
 
-					<a href="" class="dropdown-item "><i class="icon-file-plus"></i> Menu Sarapan</a>
+					<a href="<?php echo base_url('admin/sarapan'); ?>" class="dropdown-item "><i class="icon-file-plus"></i> Menu Sarapan</a>
 					<a href="" class="dropdown-item "><i class="icon-books"></i> Daftar Pesanan</a>
 					</div>
 				</li>
@@ -85,7 +85,6 @@
 
 						<a href="" class="dropdown-item "><i class="far fa-credit-card"></i>  Pembayaran Sarapan</a>
 						<a href="" class="dropdown-item "><i class="fas fa-list-ol"></i> Pembayaran Kost</a>
-						<a href="" class="dropdown-item "><i class="fas fa-search"></i> Monitor Pembayaran</a>
 					</div>
 				</li>
 				<li class="nav-item dropdown">
@@ -99,7 +98,6 @@
 
 						<a href="" class="dropdown-item "><i class="far fa-credit-card"></i>  Pengeluaran Fix </a>
 						<a href="<?php echo base_url('admin/pengeluaran'); ?>" class="dropdown-item "><i class="fas fa-list-ol"></i> Pengeluaran Barang</a>
-						<a href="" class="dropdown-item "><i class="fas fa-search"></i> Monitor Pengeluaran</a>
 						
 					</div>
 				</li>
@@ -162,8 +160,8 @@
 					</a>
 
 					<div class="dropdown-menu">
-						<a href="<?php echo base_url('admin/fasilitas'); ?>" class="dropdown-item "><i class="fas fa-clipboard"></i> Daftar Fasilitas</a>
-						<a href="<?php echo base_url('admin/fasilitas/list'); ?>"" class="dropdown-item "><i class="fas fa-list"></i> List Laporan</a>
+						<a href="<?php echo base_url('admin/fasilitas'); ?>" class="dropdown-item "><i class="fas fa-list"></i> Daftar Fasilitas</a>
+						<a href="<?php echo base_url('admin/fasilitas/laporan'); ?>"" class="dropdown-item "><i class="fas fa-clipboard"></i> List Laporan</a>
 						<!-- <a href="../seed/layout_boxed.html" class="dropdown-item "><i class="icon-align-center-horizontal"></i> Laporan Tahunan</a> -->
 
 

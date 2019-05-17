@@ -12,7 +12,7 @@ class Fasilitas extends CI_Controller{
 		$data['fasilitas'] = $this->m_fasilitas->tampil_data()->result();
 		$this->load->view('admin/fasilitas/v_fasilitas',$data);
 	}
-	
+
 	function tambah_aksi(){
 		$nama_fasilitas = $this->input->post('nama_fasilitas');
 		
@@ -33,5 +33,17 @@ class Fasilitas extends CI_Controller{
 		$where = array('fasilitas_id' => $id);
 		$this->m_fasilitas->hapus_data($where,'fasilitas');
 		redirect('admin/fasilitas/index');
+	}
+
+	function laporan(){
+		$this->load->model('m_fasilitas');
+		$data['query'] = $this->m_fasilitas->myjoin();
+		$this->load->view('admin/fasilitas/v_list_laporan',$data);
+	}
+
+	function edit_laporan($id){
+		$where = array('lapor_fasilitas_id' => $id);
+		$data['query'] = $this->m_fasilitas->myjoin();
+		$this->load->view('admin/fasilitas/v_edit_laporan',$data);
 	}
 }

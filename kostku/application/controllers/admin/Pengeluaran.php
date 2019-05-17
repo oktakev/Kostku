@@ -36,8 +36,8 @@ class Pengeluaran extends CI_Controller{
 	}
 
 	function hapus($id){
-		$where = array('data_pengeluaran_id' => $id);
-		$this->m_pengeluaran->hapus_data($where,'pengeluaran');
+		$where = array('pengeluaran_barang_id' => $id);
+		$this->m_pengeluaran->hapus_data($where,'pengeluaran_barang');
 		redirect('admin/pengeluaran/index');
 	}
 }
