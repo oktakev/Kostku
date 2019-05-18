@@ -83,6 +83,7 @@ enctype="multipart/form-data"
 							placeholder="Nama penghuni"
 							required="" 
 							name="nama_penghuni"
+							disabled=""
 							value="<?php echo $l->nama_lengkap?>"
 							>
 						</div>
@@ -95,6 +96,7 @@ enctype="multipart/form-data"
 							placeholder="Nama Fasilitas"
 							required="" 
 							name="nama_fasilitas"
+							disabled=""
 							value="<?php echo $l->nama_fasilitas?>"		
 							>
 						</div>
@@ -107,7 +109,8 @@ enctype="multipart/form-data"
 							cols="5" 
 							class="form-control" 
 							placeholder="Isi Keluhan"
-							required="" 
+							required=""
+							disabled="" 
 							name="keluhan"
 							><?php echo $l->keluhan?></textarea>
 						</div>
