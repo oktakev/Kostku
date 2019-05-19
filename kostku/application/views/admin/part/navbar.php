@@ -71,7 +71,7 @@
 					<div class="dropdown-menu">
 
 					<a href="<?php echo base_url('admin/sarapan'); ?>" class="dropdown-item "><i class="icon-file-plus"></i> Menu Sarapan</a>
-					<a href="" class="dropdown-item "><i class="icon-books"></i> Daftar Pesanan</a>
+					<a href="<?php echo base_url('admin/pesan_sarapan'); ?>" class="dropdown-item "><i class="icon-books"></i> Daftar Pesanan</a>
 					</div>
 				</li>
 				<li class="nav-item dropdown">

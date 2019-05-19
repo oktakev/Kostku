@@ -96,13 +96,14 @@
 												<input 
 													type="text" 
 													name="nama_lantai" 
-													class="form-control" 
+													class="form-control"
+													required="" 
 													placeholder="Nama Lantai">
 											</div>
 										</div>
 									</fieldset>
 									<div class="text-right">
-										  <button type="button" class="btn btn-primary">Tambah<i class="icon-paperplane ml-2"></i></button>
+										  <button type="submit" class="btn btn-primary">Tambah<i class="icon-paperplane ml-2"></i></button>
 									</div>
 								</form>
 							</div>

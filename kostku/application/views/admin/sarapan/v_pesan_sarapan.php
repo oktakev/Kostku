@@ -31,8 +31,8 @@
 
 			<div class="card-body">
 				<ul class="nav nav-tabs nav-tabs-highlight">
-					<li class="nav-item"><a href="#" class="nav-link active"><i class="icon-book mr-2"></i> Daftar Menu</a></li>
-					<li class="nav-item"><a href="<?php echo base_url('admin/pesan_sarapan'); ?>" class="nav-link"  "><i class="icon-list-ordered mr-2"></i> Daftar Pesanan</a></li></li>
+					<li class="nav-item"><a href="<?php echo base_url('admin/Sarapan'); ?>" class="nav-link"><i class="icon-book mr-2"></i> Daftar Menu</a></li>
+					<li class="nav-item"><a href="#" class="nav-link active"  "><i class="icon-list-ordered mr-2"></i> Daftar Pesanan</a></li></li>
 
 				</ul>
 
@@ -44,10 +44,10 @@
 								
 				<!-- Basic card -->
 					<div class="row">
-		<div class="col-md-6">
+		<div class="col-md-5">
 				<div class="card">
 					<div class="card-header bg-transparent header-elements-inline">
-						<h6 class="card-title">List Menu</h6>
+						<h6 class="card-title">List Pemesan</h6>
 
 						<div class="header-elements">
 						
@@ -60,19 +60,33 @@
 						<thead>
 							<tr>
 								<th>No</th>
-								<th>Nama Menu</th>
-								<th>Harga</th>
+								<th>Nama Pemesan</th>
+								<th>Nomor Kamar</th>
+								<th>Tanggal Pesan</th>
 								<th>Action</th>
 							</tr>
 						</thead>
 						<tbody>
-						
+						<?php 
+						$no = 1;
+						foreach($query as $u){ 
+						?>
 						<tr>
-							<td>1</td>
-							<td>Nasi Pecel</td>
-							<td>RP. 10,000</td>
-							<td><button class="btn btn-info"><i class="icon-pencil7"></i></button></td>
-						</tr>	
+							<td><?php echo $no++ ?></td>
+							<td><?php echo $u->nama_lengkap ?></td>
+							<td><?php echo $u->no_kamar ?></td>
+							<td><?php echo $u->tanggal ?></td>
+							<td>
+								<?php echo anchor('admin/pesan_sarapan/edit/'.$u->pesan_sarapan_id,'<button class="btn btn-success"><i class="icon-search4"></i></button>'); ?>
+								<?php echo anchor('admin/pesan_sarapan/edit/'.$u->pesan_sarapan_id,'<button class="btn btn-primary"><i class="icon-pencil7"></i></button>'); ?>
+
+								<?php //echo anchor('admin/lantai/hapus/'.$u->data_lantai_id,'<button class="btn btn-danger"><i class="icon-trash"></i></button>'); ?>
+								
+								
+							</td>
+						</tr>
+						<?php } ?>
+									
 														
 						</tbody>
 					</table>
@@ -81,10 +95,42 @@
 
 
 					
-				
 
 		</div>
-		<div class="col-md-6">
+		
+				<div class="col-md-7">
+				<div class="card">
+					<div class="card-header bg-transparent header-elements-inline">
+						<h6 class="card-title">Detail Pesanan</h6>
+
+						<div class="header-elements">
+						
+	                	</div>
+					</div>
+				<table id="user-lists" class="table datatable-basic">
+						<thead>
+							<tr>
+								<th>No</th>
+								<th>Nama Pemesan</th>
+								<th>Nomor Kamar</th>
+								<th>Nama Menu</th>
+								<th>Harga</th>
+								<th>qty</th>
+								<th>tanggal pesanan</th>
+								<th>Action</th>
+							</tr>
+						</thead>
+						<tbody>
+						
+						<tr>
+							<td></td>			
+						</tr>
+					
+									
+														
+						</tbody>
+					</table>
+		<!--<div class="col-md-6">
 				<div class="card">
 					<ul class="nav nav-tabs nav-tabs-highlight mb-0">
 						<li class="nav-item"><a href="#bordered-tab1" class="nav-link active" data-toggle="tab">
@@ -94,7 +140,7 @@
 					<div class="tab-content card card-body border-top-0 rounded-top-0 mb-0">
 					<div class="tab-pane fade show active" id="bordered-tab1">				
 					<div class="card-body">
-									<form action="" method="post">
+									<form action="<?php echo base_url(). 'admin/lantai/tambah_aksi'; ?>" method="post">
 									<fieldset>
 										<legend class="font-weight-semibold text-uppercase font-size-sm">
 											<i class="icon-file-plus mr-2"></i>
@@ -124,12 +170,13 @@
 										</div>
 									</fieldset>
 									<div class="text-right">
-										  <button type="Submit" class="btn btn-primary">Tambah<i class="icon-paperplane ml-2"></i></button>
+										  <button type="button" class="btn btn-primary">Tambah<i class="icon-paperplane ml-2"></i></button>
 									</div>
 								</form>
 							</div>
 									</div>
 								</div>
+							-->
 
 				
 
@@ -174,6 +221,7 @@
 	<!-- /footer -->
 		<!-- Theme JS files -->
 	<?php $this->load->view("admin/part/js.php") ?>
+	
 	
 
 </body>

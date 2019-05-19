@@ -131,7 +131,7 @@
 
 						
 						<div class="text-left">
-							<button type="button" class="btn btn-success">Submit <i class="icon-paperplane ml-2"></i></button>
+							<button type="Submit" class="btn btn-success">Submit <i class="icon-paperplane ml-2"></i></button>
 														<a href=""><button type="button" class="btn btn-default">Cancel <i class="icon-arrow-left8 ml-2"></i></button></a>
 													</div>
 					</form>

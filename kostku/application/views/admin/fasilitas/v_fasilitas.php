@@ -97,6 +97,7 @@
 													type="text" 
 													name="nama_fasilitas" 
 													class="form-control" 
+													required="" 
 													placeholder="Nama Fasilitas">
 											</div>
 										</div>

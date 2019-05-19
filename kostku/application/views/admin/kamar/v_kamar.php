@@ -128,6 +128,7 @@
 													type="text" 
 													name="no_kamar" 
 													class="form-control" 
+													required="" 
 													placeholder="Nomor Lantai">
 											</div>
 											<div class="form-group">
@@ -146,7 +147,7 @@
 										</div>
 									</fieldset>
 									<div class="text-right">
-										<button type="button" class="btn btn-primary">Tambah<i class="icon-paperplane ml-2"></i></button>
+										<button type="submit" class="btn btn-primary">Tambah<i class="icon-paperplane ml-2"></i></button>
 										<!--<input type="submit" name="Tambah">-->
 									</div>
 								</form>
