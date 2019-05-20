@@ -116,6 +116,7 @@
 	  <span class="file-caption-icon"><i class="glyphicon glyphicon-file"></i></span>
 	  <input class="file-caption-name" onkeydown="return false;" onpaste="return false;" placeholder="Select file..." title="No file selected">
 	</div>
+	<br>
 	<div class="input-group-btn input-group-append">
 	      <div tabindex="500" class="btn btn-primary btn-file"><i class="icon-file-plus mr-2"></i>  <span class="hidden-xs">Browse</span><input type="file" name="bukti" data-show-preview="false" class="file-input"></div>
 	    </div>
@@ -178,8 +179,8 @@
 							<td><?php echo $no++ ?></td>
 							<td><?php echo $p->kategori ?></td>
 							<td><?php echo $p->keterangan ?></td>
-							<td><?php echo $p->biaya ?></td>
-							<td><?php echo $p->tanggal ?></td>
+							<td><?php echo $this->lib->rupiah($p->biaya) ?></td>
+							<td><?php echo $this->libdate->convert($p->tanggal) ?></td>
 								<td>
 								<?php   
 									$bukti = $p->bukti;

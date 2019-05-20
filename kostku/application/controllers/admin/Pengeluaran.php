@@ -9,6 +9,8 @@ class Pengeluaran extends CI_Controller{
 	}
 
 	function index(){
+		$this->load->library("libdate");
+		$this->load->library("lib");
 		$data['pengeluaran_barang'] = $this->m_pengeluaran->tampil_data()->result();
 		$this->load->view('admin/pengeluaran/v_pengeluaran_barang',$data);
 	}
