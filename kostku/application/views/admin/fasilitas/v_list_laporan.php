@@ -47,9 +47,9 @@
 								<th>No</th>
 								<th>Nama Penghuni</th>
 								<th>Nama Fasilitas</th>
-								<th>Keluhan Penghuni</th>
-								<th>Status</th>
-								<th>Action</th>
+								<th width="50px">Keluhan Penghuni</th>
+								<th width="50px">Status</th>
+								<th width="50px">Action</th>
 							</tr>
 						</thead>
 						<tbody>

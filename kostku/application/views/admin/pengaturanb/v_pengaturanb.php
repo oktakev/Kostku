@@ -39,7 +39,7 @@
 								<th>No</th>
 								<th>Pengaturan Biaya</th>
 								<th>Biaya</th>
-								<th>Action</th>
+								<th width="100px">Action</th>
 							</tr>
 						</thead>
 						<tbody>
