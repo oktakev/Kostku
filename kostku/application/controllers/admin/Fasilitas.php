@@ -43,7 +43,7 @@ class Fasilitas extends CI_Controller{
 
 	function edit_laporan($id){
 		$where = array('lapor_fasilitas_id' => $id);
-		$data['query'] = $this->m_fasilitas->myjoin();
+		$data['query'] = $this->m_fasilitas->myjoinEdit($where);
 		$this->load->view('admin/fasilitas/v_edit_laporan',$data);
 	}
 }

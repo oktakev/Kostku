@@ -9,6 +9,7 @@ class Pengaturan extends CI_Controller{
 	}
 
 	function index(){
+		$this->load->library("lib");
 		$data['pengaturan_biaya'] = $this->m_pengaturan_biaya->tampil_data()->result();
 		$this->load->view('admin/pengaturanb/v_pengaturanb',$data);
 	}

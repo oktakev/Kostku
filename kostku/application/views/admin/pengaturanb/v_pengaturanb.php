@@ -50,7 +50,7 @@
 						<tr>
 							<td><?php echo $no++ ?></td>
 							<td><?php echo $u->nama_pengaturan ?></td>
-							<td><?php echo $u->biaya ?></td>
+							<td><?php echo $this->lib->rupiah($u->biaya) ?></td>
 							<td>
 								<?php echo anchor('admin/Pengaturan/edit/'.$u->biaya_kost_id,'<button class="btn btn-primary"><i class="icon-pencil7"></i></button>'); ?>
 
@@ -92,7 +92,7 @@
 										</legend>
 										<div class="collapse show" id="demo1">
 											<div class="form-group">
-												<label>Nama Pengaturan Biaya:</label>
+												<label>Nama Pengaturan :</label>
 												<input 
 													type="text" 
 													name="nama_pengaturan" 
@@ -102,9 +102,9 @@
 										</div>
 										<div class="collapse show" id="demo1">
 											<div class="form-group">
-												<label>Biaya</label>
+												<label>Biaya :</label>
 												<input 
-													type="text" 
+													type="number" 
 													name="Biaya" 
 													class="form-control" 
 													placeholder="Biaya">
