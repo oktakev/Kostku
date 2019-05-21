@@ -21,17 +21,17 @@ if(isset($input['username']) && isset($input['password'])){
 			//Validate the password
 			if(password_verify(concatPasswordWithSalt($password,$salt),$passwordHashDB)){
 				$response["status"] = 0;
-				$response["message"] = "Login successful";
+				$response["message"] = "Login Berhasil";
 				$response["full_name"] = $fullName;
 			}
 			else{
 				$response["status"] = 1;
-				$response["message"] = "Invalid username and password combination";
+				$response["message"] = "Login Gagal";
 			}
 		}
 		else{
 			$response["status"] = 1;
-			$response["message"] = "Invalid username and password combination";
+			$response["message"] = "Login Gagal";
 		}
 		
 		$stmt->close();
@@ -39,7 +39,7 @@ if(isset($input['username']) && isset($input['password'])){
 }
 else{
 	$response["status"] = 2;
-	$response["message"] = "Missing mandatory parameters";
+	$response["message"] = "404";
 }
 //Display the JSON response
 echo json_encode($response);
