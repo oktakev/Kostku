@@ -52,7 +52,7 @@
 						<tr>
 							<td><?php echo $no++ ?></td>
 							<td><?php echo $row->nama_lantai ?></td>
-							<td><?php echo $this->libkamar->format($row->no_kamar) ?></td>
+							<td><?php echo $row->no_kamar//echo $this->libkamar->format($row->no_kamar) ?></td>
 							<td>
 								<?php   
 									$status = $row->status;

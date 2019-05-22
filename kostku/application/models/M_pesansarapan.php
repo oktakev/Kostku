@@ -16,6 +16,3 @@ class M_pesansarapan extends CI_Model{
     	
     }
 }
-
-//SELECT k.no_kamar, dp.data_penghuni_id, k.data_kamar_id, dp.nama_lengkap FROM data_penghuni dp 
-//JOIN kamar k ON dp.data_kamar_id=k.data_kamar_id

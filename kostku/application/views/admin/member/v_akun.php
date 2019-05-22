@@ -60,7 +60,7 @@
 							<tr>
 								<th>No</th>
 								<th>Email</th>
-								<th>Nama Lengkap</th>
+								<th>Nama Penghuni</th>
 								<th>Akun Terdaftar</th>
 								<th>Action</th>
 							</tr>
@@ -100,7 +100,7 @@
 				<div class="col-md-7">
 				<div class="card">
 					<div class="card-header bg-transparent header-elements-inline">
-						<h6 class="card-title">Detail Pesanan</h6>
+						<h6 class="card-title">Detail Member</h6>
 
 						<div class="header-elements">
 						
@@ -109,20 +109,21 @@
 				<table id="user-lists" class="table datatable-basic">
 						<thead>
 							<tr>
-								<th>No</th>
-								<th>Nama Pemesan</th>
+								<th>Nama Penghuni</th>
 								<th>Nomor Kamar</th>
-								<th>Nama Menu</th>
-								<th>Harga</th>
-								<th>qty</th>
-								<th>tanggal pesanan</th>
+								<th>Alamat</th>
+								<th>Nomor Hp</th>
 								<th>Action</th>
 							</tr>
 						</thead>
 						<tbody>
 						
 						<tr>
-							<td></td>			
+							<td>Kevin Harlis</td>
+							<td>1</td>
+							<td>Jl. MPR Raya No 7 RT 003 RW 011 Ciladandak barat -Cilandak Jakarta selatan</td>
+							<td>082875193131</td>
+							<td><a href="<?php echo base_url('admin/Penghuni'); ?>">Detail</a></td>			
 						</tr>
 					
 									
