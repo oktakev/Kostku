@@ -9,6 +9,7 @@ class PengeluaranFix extends CI_Controller{
 	}
 
 	function index(){
+		$this->load->library('lib');
 		$data['pengeluaran_fix'] = $this->M_pfix->tampil_data()->result();
 		$this->load->view('admin/pengeluaranfix/v_pengeluaran',$data);
 	}

@@ -42,9 +42,25 @@
 		?>
 	<?php } ?>		
 				<div class="tab-content">
-					<div class="col-md-6 alert alert-success alert-styled-left alert-arrow-left alert-dismissible">
-	<button type="button" class="close" data-dismiss="alert"><span>×</span></button>
-	<span class="font-weight-semibold">Status Penghuni: </span> <?php echo $u->status?> 
+					<?php   
+									$status = $u->status;
+									if ($status == "Sudah Keluar") {
+									 	echo '<div class="col-md-6 alert alert-danger alert-styled-left alert-arrow-left alert-dismissible">
+												<button type="button" class="close" data-dismiss="alert"><span>×</span></button>
+												<span class="font-weight-semibold">Status Penghuni: </span>';
+											 	echo $u->status;
+									 	echo '</span>';
+									} 
+
+									else if($status == "Aktif"){
+									 	echo '<div class="col-md-6 alert alert-success alert-styled-left alert-arrow-left alert-dismissible">
+											<button type="button" class="close" data-dismiss="alert"><span>×</span></button>
+											<span class="font-weight-semibold">Status Penghuni: </span>';
+									 	echo $u->status;
+									 	echo '</span>';
+									}
+								?>
+					 
 	<br/>
 </div>
 <form 

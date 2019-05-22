@@ -41,9 +41,24 @@
 		?>
 	<?php } ?>		
 				<div class="tab-content">
-					<div class="col-md-6 alert alert-success alert-styled-left alert-arrow-left alert-dismissible">
-	<button type="button" class="close" data-dismiss="alert"><span>×</span></button>
-	<span class="font-weight-semibold">Status Fasilitas: </span> <?php echo $l->status?> 
+					<?php   
+									$status = $l->status;
+									if ($status == "Rusak") {
+									 	echo '<div class="col-md-6 alert alert-danger alert-styled-left alert-arrow-left alert-dismissible">
+												<button type="button" class="close" data-dismiss="alert"><span>×</span></button>
+												<span class="font-weight-semibold">Status Penghuni: </span>';
+											 	echo $l->status;
+									 	echo '</span>';
+									} 
+
+									else if($status == "Sudah diperbaiki"){
+									 	echo '<div class="col-md-6 alert alert-success alert-styled-left alert-arrow-left alert-dismissible">
+											<button type="button" class="close" data-dismiss="alert"><span>×</span></button>
+											<span class="font-weight-semibold">Status Penghuni: </span>';
+									 	echo $l->status;
+									 	echo '</span>';
+									}
+								?> 
 	<br/>
 </div>
 <form 
@@ -76,7 +91,7 @@ enctype="multipart/form-data"
 					<input type="hidden" name="id" value="<?php echo $l->lapor_fasilitas_id ?>">
 					<div class="collapse show" id="demo1">
 						<div class="form-group">
-							<label>Nama Penghuni:</label>
+							<label>Nama Pelapor:</label>
 							<input 
 							type="text" 
 							class="form-control" 
@@ -103,7 +118,7 @@ enctype="multipart/form-data"
 
 						
 						<div class="form-group">
-							<label>Keluhan Penghuni</label>
+							<label>Keluhan Pelapor</label>
 							<textarea 
 							rows="5" 
 							cols="5" 

@@ -150,7 +150,7 @@
 <div class="col-md-9">
 	<div class="card">
 		<div class="card-header bg-transparent header-elements-inline">
-			<h6 class="card-title">Pengeluaran Barang Setiap Bulan</h6>
+			<h6 class="card-title">List Pengeluaran Barang</h6>
 
 			<div class="header-elements">
 

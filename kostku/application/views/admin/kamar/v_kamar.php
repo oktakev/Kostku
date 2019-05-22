@@ -112,7 +112,7 @@
 										<div class="collapse show" id="demo1">
 											<div class="form-group">
 												<label>Pilih Lantai:</label>
-												 <select class="form-control" name="data_lantai_id">
+												 <select class="form-control" name="data_lantai_id" required="">
 										            <?php 
 										            foreach($groups as $row){ 
 										              echo '<option value="'.$row->data_lantai_id.'">'.$row->nama_lantai.'</option>';

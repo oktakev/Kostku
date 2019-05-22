@@ -40,7 +40,7 @@
 								<th>No</th>
 								<th>Nama Pengeluaran</th>
 								<th>Biaya</th>
-								<th>Action</th>
+								<th width="100px">Action</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -51,7 +51,7 @@
 						<tr>
 							<td><?php echo $no++ ?></td>
 							<td><?php echo $u->nama_pengeluaran ?></td>
-							<td><?php echo $u->biaya ?></td>	
+							<td><?php echo $this->lib->rupiah($u->biaya) ?></td>	
 							<td>
 								<?php echo anchor('admin/PengeluaranFix/edit/'.$u->fix_id,'<button class="btn btn-primary"><i class="icon-pencil7"></i></button>'); ?>
 

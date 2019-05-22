@@ -45,9 +45,9 @@
 						<thead>
 							<tr>
 								<th>No</th>
-								<th>Nama Penghuni</th>
+								<th>Nama Pelapor</th>
 								<th>Nama Fasilitas</th>
-								<th width="50px">Keluhan Penghuni</th>
+								<th width="50px">Keluhan Pelapor</th>
 								<th width="50px">Status</th>
 								<th width="50px">Action</th>
 							</tr>
@@ -70,11 +70,11 @@
 									 	echo '</span>';
 									} 
 
-									else if($status == "Sudah diperbaiki"){
-									 	echo '<span class="badge bagde-success">';
+									else if($status == "Sudah diperbaiki") {
+									 	echo '<span class="badge badge-success">';
 									 	echo $l->status;
 									 	echo '</span>';
-									}
+									} 
 								?></td>
 
 							<td>

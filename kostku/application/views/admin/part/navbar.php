@@ -202,7 +202,24 @@
 			</ul>
 
 			<ul class="navbar-nav ml-md-auto">
+			<ul class="navbar-nav ml-md-auto">
 			
+
+				<li class="nav-item dropdown">
+					<a href="#" class="navbar-nav-link dropdown-toggle" data-toggle="dropdown">
+						<i class="icon-cog3"></i>
+						<span class="d-md-none ml-2">Dropdown</span>
+					</a>
+
+					<div class="dropdown-menu dropdown-menu-right">
+						<a href="<?php echo base_url('admin/akun'); ?>" class="dropdown-item"><i class="icon-user-lock"></i> Account Member</a>
+						<a href="#" class="dropdown-item"><i class="icon-statistics"></i> Analytics</a>
+						<a href="#" class="dropdown-item"><i class="icon-accessibility"></i> Accessibility</a>
+						<div class="dropdown-divider"></div>
+						<a href="#" class="dropdown-item"><i class="icon-gear"></i> All settings</a>
+					</div>
+				</li>
+			</ul>
 
 		</div>
 	</div>
