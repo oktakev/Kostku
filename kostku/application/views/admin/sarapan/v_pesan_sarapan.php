@@ -77,8 +77,7 @@
 							<td><?php echo $u->no_kamar ?></td>
 							<td><?php echo $this->libdate->convert($u->tanggal) ?></td>
 							<td>
-								<button onclick="myFunction()" class="btn btn-success"><i class="icon-search4"></i></button>
-								<?php //echo anchor('admin/pesan_sarapan/edit/'.$u->pesan_sarapan_id,'<button class="btn btn-primary"><i class="icon-pencil7"></i></button>'); ?>
+								<?php echo anchor('admin/pesan_sarapan/index/'.$u->pesan_sarapan_id,'<button onclick="myFunction()" class="btn btn-primary"><i class="icon-pencil7"></i></button>'); ?>
 
 								<?php //echo anchor('admin/lantai/hapus/'.$u->pesan_sarapan_id,'<button class="btn btn-primary"><i class="icon-check"></i></button>'); ?>
 								

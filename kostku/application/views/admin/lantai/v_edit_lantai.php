@@ -114,7 +114,7 @@
 											</a>
 										</legend>
 
-												<input type="hidden" name="id" value="<?php echo $u->data_lantai_id ?>">
+												<input type="hidden" name="data_lantai_id" value="<?php echo $u->data_lantai_id ?>">
 										<div class="collapse show" id="demo1">
 											<div class="form-group">
 												<label>Nama Lantai:</label>
