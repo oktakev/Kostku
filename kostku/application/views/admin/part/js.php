@@ -13,4 +13,5 @@
     	<script src="<?php echo base_url('assets/js/jquery.number.js') ?>"></script>
     	<script src="<?php echo base_url('assets/js/highcharts.js') ?>"></script>
     	<script src="<?php echo base_url('assets/js/highcharts-3d.js') ?>"></script>
-    <!--tabel-->
+    <!--sweetalert-->
+    <script src="<?php echo base_url('assets/js/sweetalert.js') ?>"></script>

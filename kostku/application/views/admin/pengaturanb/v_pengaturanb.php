@@ -105,7 +105,7 @@
 												<label>Biaya :</label>
 												<input 
 													type="number" 
-													name="Biaya" 
+													name="biaya" 
 													class="form-control" 
 													placeholder="Biaya">
 											</div>

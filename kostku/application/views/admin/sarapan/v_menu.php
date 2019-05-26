@@ -25,7 +25,7 @@
 	<div class="col-md-12">
 		<div class="card">
 			<div class="card-header header-elements-inline">
-				<h6 class="card-title">Menu Sarapan Kost</h6>
+				<h6 class="card-title">Menu Makanan Kost</h6>
 
 			</div>
 

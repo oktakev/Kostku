@@ -49,7 +49,7 @@
 								<th>Alamat</th>
 								<th>No Hp</th>
 								<th>No Kamar</th>
-								<th>Biaya Kos</th>
+								<th>Biaya Bulanan</th>
 								<th>Status</th>
 								<th>Action</th>
 							</tr>

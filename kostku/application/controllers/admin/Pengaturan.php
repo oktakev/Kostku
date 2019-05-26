@@ -16,8 +16,10 @@ class Pengaturan extends CI_Controller{
 	
 	function tambah_aksi(){
 		$nama_pengaturan = $this->input->post('nama_pengaturan');
+		$biaya = $this->input->post('biaya');
 		$data = array(
-			'nama_pengaturan' => $nama_pengaturan
+			'nama_pengaturan' => $nama_pengaturan,
+			'biaya' => $biaya
 			);
 		$this->m_pengaturan_biaya->input_data($data,'pengaturan_biaya');
 		redirect('admin/pengaturan/index');

@@ -25,7 +25,7 @@
 	<div class="col-md-12">
 		<div class="card">
 			<div class="card-header header-elements-inline">
-				<h6 class="card-title">Menu Sarapan Kost</h6>
+				<h6 class="card-title">Menu Makanan Kost</h6>
 
 			</div>
 
@@ -77,10 +77,10 @@
 							<td><?php echo $u->no_kamar ?></td>
 							<td><?php echo $this->libdate->convert($u->tanggal) ?></td>
 							<td>
-								<?php echo anchor('admin/pesan_sarapan/detail/'.$u->pesan_sarapan_id,'<button class="btn btn-success"><i class="icon-search4"></i></button>'); ?>
+								<button onclick="myFunction()" class="btn btn-success"><i class="icon-search4"></i></button>
 								<?php //echo anchor('admin/pesan_sarapan/edit/'.$u->pesan_sarapan_id,'<button class="btn btn-primary"><i class="icon-pencil7"></i></button>'); ?>
 
-								<?php //echo anchor('admin/lantai/hapus/'.$u->data_lantai_id,'<button class="btn btn-danger"><i class="icon-trash"></i></button>'); ?>
+								<?php //echo anchor('admin/lantai/hapus/'.$u->pesan_sarapan_id,'<button class="btn btn-primary"><i class="icon-check"></i></button>'); ?>
 								
 								
 							</td>
@@ -99,7 +99,7 @@
 		</div>
 		
 				<div class="col-md-7">
-				<div class="card">
+				<div id="detailmakan" class="card">
 					<div class="card-header bg-transparent header-elements-inline">
 						<h6 class="card-title">Detail Pesanan</h6>
 
@@ -107,7 +107,7 @@
 						
 	                	</div>
 					</div>
-				<table id="user-lists" class="table datatable-basic">
+				<table id="" class="table datatable-basic">
 						<thead>
 							<tr>
 								<th>No</th>
@@ -115,12 +115,11 @@
 								<th>Nomor Kamar</th>
 								<th>Nama Menu</th>
 								<th>Harga</th>
-								<th>Qty</th>
 							</tr>
 						</thead>
 						<tbody>
 						<?php 
-						/*
+						
 						$no = 1;
 						foreach($detailquery as $qd){ 
 						?>
@@ -140,7 +139,7 @@
 								
 							</td>
 						</tr>
-						<?php }*/ ?>
+						<?php } ?>
 									
 														
 						</tbody>
@@ -187,7 +186,16 @@
 		<!-- Theme JS files -->
 	<?php $this->load->view("admin/part/js.php") ?>
 	
-	
+	<script>
+function myFunction() {
+  var x = document.getElementById("detailmakan");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
 
 </body>
 </html>

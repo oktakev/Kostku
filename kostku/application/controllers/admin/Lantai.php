@@ -29,8 +29,8 @@ class Lantai extends CI_Controller{
 	$this->load->view('admin/lantai/v_edit_lantai',$data);
 	}
 
-	function update(){
-	$data_lantai_id = $this->input->post('data_lantai_id');
+		function update(){
+	$id = $this->input->post('data_lantai_id');
 	$nama_lantai = $this->input->post('nama_lantai');
 	
 	$data = array(
@@ -38,11 +38,17 @@ class Lantai extends CI_Controller{
 	);
 
 	$where = array(
-		'data_lantai_id' => $data_lantai_id
+		'data_lantai_id' => $id
 	);
 
 	$this->m_lantai->update_data($where,$data,'lantai');
 	redirect('admin/lantai/index');
+	
+	function hapus($id){
+		$where = array('data_lantai_id' => $id);
+		$this->m_lantai->hapus_data($where,'lantai');
+		redirect('admin/lantai/index');
+	}
 }
 	
 	function hapus($id){

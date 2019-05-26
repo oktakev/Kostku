@@ -64,13 +64,13 @@
 				<li class="nav-item dropdown">
 					<a href="#" class="navbar-nav-link dropdown-toggle" data-toggle="dropdown" >
 						<i class="fas fa-utensils mr-2"></i>
-						Sarapan
+						Makanan
 					</a>
 
 
 					<div class="dropdown-menu">
 
-					<a href="<?php echo base_url('admin/sarapan'); ?>" class="dropdown-item "><i class="icon-file-plus"></i> Menu Sarapan</a>
+					<a href="<?php echo base_url('admin/sarapan'); ?>" class="dropdown-item "><i class="icon-file-plus"></i> Menu Makanan</a>
 					<a href="<?php echo base_url('admin/pesan_sarapan'); ?>" class="dropdown-item "><i class="icon-books"></i> Daftar Pesanan</a>
 					</div>
 				</li>

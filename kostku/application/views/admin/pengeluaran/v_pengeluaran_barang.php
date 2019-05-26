@@ -64,6 +64,8 @@
 									<select name="kategori" class="form-control">
 										<option value="">---Pilih Kategori---</option>
 										<option>Pembayaran Listrik</option>
+										<option>Pembayaran Air</option>
+										<option>Pembayararan Wifi</option>
 										<option>Pembelanjaan Barang</option>
 																				
 									</select>

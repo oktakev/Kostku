@@ -104,6 +104,16 @@
 													placeholder="Nama Pengaturan Biaya"
 													value="<?php echo $u->nama_pengaturan ?>">
 											</div>
+											<div class="collapse show" id="demo1">
+											<div class="form-group">
+												<label>Biaya :</label>
+												<input 
+													type="number" 
+													name="biaya" 
+													class="form-control" 
+													placeholder="Biaya"
+													value="<?php echo $u->biaya ?>">
+											</div>
 										</div>
 									</fieldset>
 									<div class="text-right">
