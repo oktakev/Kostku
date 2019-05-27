@@ -9,6 +9,7 @@ class Sarapan extends CI_Controller{
 	}
 
 	function index(){
+		$this->load->library("lib");
 		$data['menu_sarapan'] = $this->m_menu_sarapan->tampil_data()->result();
 		$this->load->view('admin/sarapan/v_menu',$data);
 	}

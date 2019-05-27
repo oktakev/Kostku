@@ -73,7 +73,7 @@
 						<tr>
 							<td><?php echo $no++ ?></td>
 							<td><?php echo $u->nama_menu ?></td>
-							<td><?php echo $u->harga ?></td>
+							<td><?php echo $this->lib->rupiah($u->harga) ?></td>
 							<td>
 								<?php echo anchor('admin/sarapan/edit/'.$u->menu_sarapan_id,'<button class="btn btn-primary"><i class="icon-pencil7"></i></button>'); ?>
 
