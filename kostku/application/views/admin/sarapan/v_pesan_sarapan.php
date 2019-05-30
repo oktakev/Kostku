@@ -44,7 +44,7 @@
 								
 				<!-- Basic card -->
 					<div class="row">
-		<div class="col-md-5">
+		<div class="col-md-6">
 				<div class="card">
 					<div class="card-header bg-transparent header-elements-inline">
 						<h6 class="card-title">List Pemesan</h6>
@@ -63,6 +63,7 @@
 								<th>Nama Pemesan</th>
 								<th>Nomor Kamar</th>
 								<th>Tanggal Pesan</th>
+								<th>Status</th>
 								<th>Action</th>
 							</tr>
 						</thead>
@@ -77,8 +78,24 @@
 							<td><?php echo $u->no_kamar ?></td>
 							<td><?php echo $this->libdate->convert($u->tanggal) ?></td>
 							<td>
-								<?php echo anchor('admin/pesan_sarapan/edit/'.$u->pesan_sarapan_id,'<button class="btn btn-success"><i class="icon-search4"></i></button>'); ?>
-								<?php echo anchor('admin/pesan_sarapan/edit/'.$u->pesan_sarapan_id,'<button class="btn btn-primary"><i class="icon-pencil7"></i></button>'); ?>
+								<?php   
+									$status = $u->status;
+									if ($status == "Pending") {
+									 	echo '<span class="badge badge-danger"><i class="icon-file-minus2">&nbsp</i>';
+									 	echo $u->status;
+									 	echo '</span>';
+									} 
+
+									else if($status == "Selesai"){
+									 	echo '<span class="badge badge-success"><i class="icon-file-check2">&nbsp</i>';
+									 	echo $u->status;
+									 	echo '</span>';
+									}
+								?>
+							</td>
+							<td>
+								<?php echo anchor('admin/detail/pesanan/'.$u->pesan_sarapan_id,'<button class="btn btn-success"><i class="icon-search4"></i></button>'); ?>
+								<?php //echo anchor('admin/pesan_sarapan/edit/'.$u->pesan_sarapan_id,'<button class="btn btn-primary"><i class="icon-pencil7"></i></button>'); ?>
 
 								<?php //echo anchor('admin/lantai/hapus/'.$u->data_lantai_id,'<button class="btn btn-danger"><i class="icon-trash"></i></button>'); ?>
 								
@@ -97,104 +114,15 @@
 					
 
 		</div>
-		
-				<div class="col-md-7">
-				<div class="card">
-					<div class="card-header bg-transparent header-elements-inline">
-						<h6 class="card-title">Detail Pesanan</h6>
-
-						<div class="header-elements">
-						
-	                	</div>
-					</div>
-				<table id="user-lists" class="table datatable-basic">
-						<thead>
-							<tr>
-								<th>No</th>
-								<th>Nama Pemesan</th>
-								<th>Nomor Kamar</th>
-								<th>Nama Menu</th>
-								<th>Harga</th>
-								<th>qty</th>
-								<th>tanggal pesanan</th>
-								<th>Action</th>
-							</tr>
-						</thead>
-						<tbody>
-						
-						<tr>
-							<td></td>			
-						</tr>
-					
-									
-														
-						</tbody>
-					</table>
-		<!--<div class="col-md-6">
-				<div class="card">
-					<ul class="nav nav-tabs nav-tabs-highlight mb-0">
-						<li class="nav-item"><a href="#bordered-tab1" class="nav-link active" data-toggle="tab">
-							Form Menu</a>
-						</li>
-					</ul>
-					<div class="tab-content card card-body border-top-0 rounded-top-0 mb-0">
-					<div class="tab-pane fade show active" id="bordered-tab1">				
-					<div class="card-body">
-									<form action="<?php echo base_url(). 'admin/lantai/tambah_aksi'; ?>" method="post">
-									<fieldset>
-										<legend class="font-weight-semibold text-uppercase font-size-sm">
-											<i class="icon-file-plus mr-2"></i>
-											Tambah Menu
-											<a class="float-right text-default" data-toggle="collapse" data-target="#demo2">
-												<i class="icon-circle-down2"></i>
-											</a>
-										</legend>
-
-										<div class="collapse show" id="demo1">
-											<div class="form-group">
-												<label>Nama Menu:</label>
-												<input 
-													type="text" 
-													name="nama_lantai" 
-													class="form-control" 
-													placeholder="Nama Menu">
-											</div>
-											<div class="form-group">
-												<label>Harga :</label>
-												<input 
-													type="number" 
-													name="harga" 
-													class="form-control" 
-													placeholder="Harga menu">
-											</div>
-										</div>
-									</fieldset>
-									<div class="text-right">
-										  <button type="button" class="btn btn-primary">Tambah<i class="icon-paperplane ml-2"></i></button>
-									</div>
-								</form>
-							</div>
-									</div>
-								</div>
-							-->
-
-				
-
-
-					
-				</div>
 
 		</div>
-	</div>
-	</div>				
-					</div>
-					</div>
-					</div>
-					</div>
 
-					
+	</div>
+
+</div>
 
 				</div>
+
 			</div>
 		</div>
 

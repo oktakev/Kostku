@@ -54,8 +54,6 @@
 			<td><?php echo $u->nama_pengaturan ?></td>
 			<td><?php echo $u->biaya ?></td>
 			<td>
-				<?php echo anchor('admin/Pengaturan/edit/'.$u->biaya_kost_id,'<button class="btn btn-primary"><i class="icon-pencil7"></i></button>'); ?>
-
 				<?php echo anchor('admin/Pengaturan/hapus/'.$u->biaya_kost_id,'<button class="btn btn-danger"><i class="icon-trash"></i></button>'); ?>
 				
 				
@@ -93,13 +91,13 @@
 											</a>
 										</legend>
 
-												<input type="hidden" name="id" value="<?php echo $u->biaya_kost_id ?>">
+									<input type="hidden" name="biaya_kost_id" value="<?php echo $u->biaya_kost_id ?>">
 										<div class="collapse show" id="demo1">
 											<div class="form-group">
 												<label>Nama Pengaturan Biaya:</label>
 												<input 
 													type="text" 
-													name="nama_Pengaturan_Biaya" 
+													name="nama_pengaturan" 
 													class="form-control" 
 													placeholder="Nama Pengaturan Biaya"
 													value="<?php echo $u->nama_pengaturan ?>">

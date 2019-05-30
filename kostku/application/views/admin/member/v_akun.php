@@ -119,10 +119,10 @@
 						<tbody>
 						
 						<tr>
-							<td>Kevin Harlis</td>
-							<td>1</td>
-							<td>Jl. MPR Raya No 7 RT 003 RW 011 Ciladandak barat -Cilandak Jakarta selatan</td>
-							<td>082875193131</td>
+							<td>Oktakev</td>
+							<td>02</td>
+							<td>Jl Sadar No 16 RT 009 RW 004 Petojo Utara Gambir Jakarta Pusat</td>
+							<td>089123123123</td>
 							<td><a href="<?php echo base_url('admin/Penghuni'); ?>">Detail</a></td>			
 						</tr>
 					

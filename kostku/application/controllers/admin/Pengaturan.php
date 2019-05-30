@@ -32,19 +32,21 @@ class Pengaturan extends CI_Controller{
 	}
 
 	function update(){
-	$biaya_kost_id = $this->input->post('biaya_kost_id');
+	$id = $this->input->post('biaya_kost_id');
 	$nama_pengaturan = $this->input->post('nama_pengaturan');
+	$biaya = $this->input->post('biaya');
 	
 	$data = array(
-		'nama_pengaturan' => $nama_pengaturan
+		'nama_pengaturan' => $nama_pengaturan,
+		'biaya' => $biaya
 	);
 
 	$where = array(
-		'biaya_kost_id' => $biaya_kost_id
+		'biaya_kost_id' => $id
 	);
 
 	$this->m_pengaturan_biaya->update_data($where,$data,'pengaturan_biaya');
-	redirect('admin/pengaturanb/index');
+	redirect('admin/Pengaturan/index');
 }
 	
 	function hapus($id){

@@ -94,7 +94,7 @@
 										</span>
 
 										<input 
-										type="date" 
+										type="text" 
 										class="form-control daterange-single" 
 										required="" 
 										name="tanggal"
@@ -132,7 +132,7 @@
 							</div>
 						</fieldset>
 
-						
+						<br>
 						<div class="text-left">
 							<button type="Submit" class="btn btn-success">Submit <i class="icon-paperplane ml-2"></i></button>
 														<a href=""><button type="button" class="btn btn-default">Cancel <i class="icon-arrow-left8 ml-2"></i></button></a>

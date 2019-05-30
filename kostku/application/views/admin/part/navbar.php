@@ -85,6 +85,7 @@
 
 						<a href="" class="dropdown-item "><i class="far fa-credit-card"></i>  Pembayaran Sarapan</a>
 						<a href="" class="dropdown-item "><i class="fas fa-list-ol"></i> Pembayaran Kost</a>
+						<a href="<?php echo base_url('admin/monitor'); ?>" class="dropdown-item "><i class="icon-book  mr-2"></i> Monitoring Pembayaran</a>
 					</div>
 				</li>
 				<li class="nav-item dropdown">

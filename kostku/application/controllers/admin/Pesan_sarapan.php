@@ -14,10 +14,4 @@ class Pesan_sarapan extends CI_Controller{
 		$data['query'] = $this->m_pesansarapan->myjoin();
 		$this->load->view('admin/sarapan/v_pesan_sarapan',$data);
 	}
-	function detail(){
-		$this->load->library("lib");
-		$this->load->model('m_detail_sarapan');
-		$data['detailquery'] = $this->m_detail_sarapan->myjoin();
-		$this->load->view('admin/sarapan/v_pesan_sarapan',$data);
-	}
 }

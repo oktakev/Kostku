@@ -7,7 +7,8 @@ class M_pesansarapan extends CI_Model{
     						pesan_sarapan.pesan_sarapan_id,
     						data_penghuni.nama_lengkap,
                             kamar.no_kamar,
-    						pesan_sarapan.tanggal
+    						pesan_sarapan.tanggal,
+                            pesan_sarapan.status
     						');
     	$this->db->from('pesan_sarapan');
     	$this->db->join('data_penghuni','pesan_sarapan.data_penghuni_id = data_penghuni.data_penghuni_id');

@@ -24,11 +24,17 @@ class M_kamar extends CI_Model{
         $this->db->where($where);
         $this->db->delete($table);
     }
+    function update_data($where,$data,$table){
+        $this->db->where($where);
+        $this->db->update($table,$data);
+    }
 
-    function edit_data($where,$table){      
+    function edit_data($id){      
         $this->db->select('*');
         $this->db->from('lantai');
         $this->db->join('kamar','lantai.data_lantai_id = kamar.data_lantai_id');
+        $this->db->where($id);
         return $this->db->get()->result();
     }
+
 }

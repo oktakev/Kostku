@@ -175,6 +175,7 @@
 	<!-- /footer -->
     <?php $this->load->view("admin/part/js.php") ?>
     <!--js-->
+
 <script type="text/javascript">
 	$(document).ready(function(){
 		$('.number-angka').number(true);

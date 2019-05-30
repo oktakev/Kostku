@@ -8,10 +8,10 @@ class Detail extends CI_Controller{
                 $this->load->helper('url');
 	}
 
-	function index(){
+	function pesanan($id){
 		$this->load->library("lib");
-		$this->load->model('m_detail_sarapan');
-		$data['querydetail'] = $this->m_detail_sarapan->myjoin();
-		$this->load->view('admin/sarapan/v_pesan_sarapan',$data);
+		$where = array('detail_id' => $id);
+		$data['query'] = $this->m_detail_sarapan->detailjoin($where);
+		$this->load->view('admin/sarapan/v_detail_sarapan',$data);
 	}
 }

@@ -24,40 +24,19 @@
 	<div class="col-md-12">
 		<div class="card">
 			<div class="card-header header-elements-inline">
-				<h6 class="card-title">Edit Laporan Fasilitas</h6>
+				<h6 class="card-title">Detail Pesanan</h6>
 
 			</div>
 
 			<div class="card-body">
 				<ul class="nav nav-tabs nav-tabs-highlight">
-					<li class="nav-item"><a href="<?php echo base_url('admin/Fasilitas/laporan'); ?>" class="nav-link"><i class="icon-clipboard3 mr-2"></i> List Laporan</a></li>
-					<li class="nav-item"><a href="#" class="nav-link active"  "><i class="icon-list2 mr-2"></i> Edit List</a></li></li>
+					<li class="nav-item"><a href="<?php echo base_url('admin/Fasilitas/laporan'); ?>" class="nav-link active"><i class="icon-clipboard3 mr-2"></i> List Detail</a></li>
 
 				</ul>
-<?php 
-		$no = 1;
-		foreach($query as $l){ 
-		?>
-	<?php } ?>		
 				<div class="tab-content">
-					<?php   
-									$status = $l->status;
-									if ($status == "Rusak") {
-									 	echo '<div class="col-md-6 alert alert-danger alert-styled-left alert-arrow-left alert-dismissible">
+					<div class="col-md-6 alert alert-danger alert-styled-left alert-arrow-left alert-dismissible">
 												<button type="button" class="close" data-dismiss="alert"><span>×</span></button>
-												<span class="font-weight-semibold">Status Penghuni: </span>';
-											 	echo $l->status;
-									 	echo '</span>';
-									} 
-
-									else if($status == "Sudah diperbaiki"){
-									 	echo '<div class="col-md-6 alert alert-success alert-styled-left alert-arrow-left alert-dismissible">
-											<button type="button" class="close" data-dismiss="alert"><span>×</span></button>
-											<span class="font-weight-semibold">Status Penghuni: </span>';
-									 	echo $l->status;
-									 	echo '</span>';
-									}
-								?> 
+												<span class="font-weight-semibold"><i>Pesanan Masih Pending </span>
 	<br/>
 </div>
 <form 
@@ -76,21 +55,26 @@ enctype="multipart/form-data"
 				<!-- <h5 class="card-title">Form Data Penghuni Baru</h5> -->
 
 			</div>
-			
+				<?php 
+					$no = 1;
+					foreach($query as $l){ 
+				?>
+				
+				<?php } ?>
 			<div class="card-body">
 				
 				<fieldset>
 					<legend class="font-weight-semibold text-uppercase font-size-sm">
 						<i class="icon-file-text2 mr-2"></i>
-						Data Laporan Fasilitas
+						Data Pemesan
 						<a href="#" class="float-right text-default" data-toggle="collapse" data-target="#demo1">
 							<i class="icon-circle-down2"></i>
 						</a>
 					</legend>
-					<input type="hidden" name="id" value="<?php echo $l->lapor_fasilitas_id ?>">
+					<input type="hidden" name="detail_id" value="<?php echo $l->detail_id ?>">
 					<div class="collapse show" id="demo1">
 						<div class="form-group">
-							<label>Nama Pelapor:</label>
+							<label>Nama Pemesan</label>
 							<input 
 							type="text" 
 							class="form-control" 
@@ -103,7 +87,7 @@ enctype="multipart/form-data"
 						</div>
 
 						<div class="form-group">
-							<label>Nama Fasilitas</label>
+							<label>No Kamar</label>
 							<input 
 							type="text" 
 							class="form-control"
@@ -111,13 +95,23 @@ enctype="multipart/form-data"
 							required="" 
 							name="nama_fasilitas"
 							disabled=""
-							value="<?php echo $l->nama_fasilitas?>"		
+							value="<?php echo $l->no_kamar?>"		
 							>
 						</div>
 
+					<legend class="font-weight-semibold text-uppercase font-size-sm">
+						<i class="fas fa-utensils mr-2"></i>
+						Menu Pesanan
+						<a href="#" class="float-right text-default" data-toggle="collapse" data-target="#demo1">
+							<i class="icon-circle-down2"></i>
+						</a>
+					</legend>
+					<input type="hidden" name="detail_id" value="<?php echo $l->detail_id ?>">
+					<div class="collapse show" id="demo1">
+						<div class="form-group">
 						
 						<div class="form-group">
-							<label>Keluhan Pelapor</label>
+							<label>Menu yang dipilih</label>
 							<textarea 
 							rows="5" 
 							cols="5" 
@@ -126,9 +120,22 @@ enctype="multipart/form-data"
 							required=""
 							disabled="" 
 							name="keluhan"
-							><?php echo $l->keluhan?></textarea>
+							><?php echo $l->nama_menu?></textarea>
 						</div>
 					</div>
+
+					<div class="form-group">
+							<label>Harga Menu</label>
+							<input 
+							type="text" 
+							class="form-control"
+							placeholder="Nama Fasilitas"
+							required="" 
+							name="nama_fasilitas"
+							disabled=""
+							value="<?php echo $this->lib->rupiah($l->harga) ?>"		
+							>
+						</div>
 				</fieldset>
 
 
@@ -137,6 +144,7 @@ enctype="multipart/form-data"
 
 				<div class="text-left">
 					<button type="button" class="btn btn-primary">Submit Data <i class="icon-paperplane ml-2"></i></button>
+					<button type="button" class="btn btn-danger">Batalkan Pesanan <i class="icon-x ml-2"></i></button>
 				</div>
 
 			</div>
@@ -164,8 +172,8 @@ enctype="multipart/form-data"
 							<label>Status</label>
 							<select class="form-control">
 								<option>---Pilih Status---</option>
-								<option>Sudah Diperbaiki</option>
-								<option>Rusak</option>
+								<option>Pending</option>
+								<option>Selesai</option>
 							</select>
 						</div>
 						</div>

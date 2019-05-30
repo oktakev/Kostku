@@ -57,13 +57,13 @@
 								<?php   
 									$status = $row->status;
 									if ($status == "Ditempati") {
-									 	echo '<span class="badge badge-danger">';
+									 	echo '<span class="text-danger">';
 									 	echo $row->status;
 									 	echo '</span>';
 									} 
 
 									else if($status == "Kosong"){
-									 	echo '<span class="badge badge-success">';
+									 	echo '<span class="text-success">';
 									 	echo $row->status;
 									 	echo '</span>';
 									}

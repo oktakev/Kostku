@@ -52,25 +52,25 @@
 						<tr>
 							<td><?php echo $no++ ?></td>
 							<td><?php echo $row->nama_lantai ?></td>
-							<td><?php //echo $this->libkamar->format($row->no_kamar) ?></td>
+							<td><?php echo $row->no_kamar ?></td>
 							<td>
 								<?php   
 									$status = $row->status;
 									if ($status == "Ditempati") {
-									 	echo '<span class="badge badge-danger">';
+									 	echo '<span class="text-danger">';
 									 	echo $row->status;
 									 	echo '</span>';
 									} 
 
 									else if($status == "Kosong"){
-									 	echo '<span class="badge badge-success">';
+									 	echo '<span class="text-success">';
 									 	echo $row->status;
 									 	echo '</span>';
 									}
 								?>
 							</td>
 							<td>
-								<?php echo anchor('admin/kamar/edit/'.$row->data_kamar_id,'<button class="btn btn-primary"><i class="icon-pencil7"></i></button>'); ?>
+								<?php //echo anchor('admin/kamar/edit/'.$row->data_kamar_id,'<button class="btn btn-primary"><i class="icon-pencil7"></i></button>'); ?>
 
 								<?php echo anchor('admin/kamar/hapus/'.$row->data_kamar_id,'<button class="btn btn-danger"><i class="icon-trash"></i></button>'); ?>
 								
@@ -100,7 +100,7 @@
 					<div class="tab-pane fade show active" id="bordered-tab1">				
 					<div class="card-body">
 									<form action="<?php echo base_url(). 'admin/kamar/update'; ?>" method="post">
-										<input type="hidden" name="id" value="<?php echo $row->data_kamar_id ?>">
+										<input type="hidden" name="data_kamar_id" value="<?php echo $row->data_kamar_id ?>">
 									<fieldset>
 										<legend class="font-weight-semibold text-uppercase font-size-sm">
 											<i class="icon-reading mr-2"></i>
@@ -113,8 +113,10 @@
 										<div class="collapse show" id="demo1">
 											<div class="form-group">
 												<label>Pilih Lantai:</label>
-												 <select class="form-control" name="data_lantai_id">
-										            <option><?php echo $row->nama_lantai ?></option>
+												 <select class="form-control" name="nama_lantai">
+										            <option>Lantai 1</option>
+										            <option>Lantai 2</option>
+										            <option>Lantai 3</option>
 										            </select>
 											</div>
 										</div>
@@ -131,7 +133,9 @@
 											<div class="form-group">
 												<label>Status:</label>
 												<select class="form-control" name="status">
-													<option><?php echo $row->status ?></option>
+													<option>---Pilih status kamar---</option>
+													<option>Kosong</option>
+													<option>Ditempati</option>
 												</select>
 												<!-- <input 
 													type="text" 
@@ -142,7 +146,7 @@
 										</div>
 									</fieldset>
 									<div class="text-right">
-										<button type="button" class="btn btn-primary">Tambah<i class="icon-paperplane ml-2"></i></button>
+										<button type="submit" class="btn btn-primary">Tambah<i class="icon-paperplane ml-2"></i></button>
 										<!--<input type="submit" name="Tambah">-->
 									</div>
 								</form>
