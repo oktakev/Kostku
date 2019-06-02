@@ -32,15 +32,17 @@ class Sarapan extends CI_Controller{
 	}
 
 	function update(){
-	$biaya_kost_id = $this->input->post('menu_sarapan_id');
-	$nama_pengaturan = $this->input->post('nama_menu');
+	$id = $this->input->post('id');
+	$nama_menu = $this->input->post('nama_menu');
+	$harga = $this->input->post('harga');
 	
 	$data = array(
-		'nama_menu' => $nama_menu
+		'nama_menu' => $nama_menu,
+		'harga' => $harga
 	);
 
 	$where = array(
-		'menu_sarapan_id' => $menu_sarapan_id
+		'menu_sarapan_id' => $id
 	);
 
 	$this->m_menu_sarapan->update_data($where,$data,'menu_sarapan');

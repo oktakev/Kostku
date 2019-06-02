@@ -54,7 +54,7 @@
 			<td><?php echo $u->nama_menu ?></td>
 			<td><?php echo $u->harga ?></td>
 			<td>
-				<?php echo anchor('admin/Sarapan/edit/'.$u->menu_sarapan_id,'<button class="btn btn-primary"><i class="icon-pencil7"></i></button>'); ?>
+				<?php //echo anchor('admin/Sarapan/edit/'.$u->menu_sarapan_id,'<button class="btn btn-primary"><i class="icon-pencil7"></i></button>'); ?>
 
 				<?php echo anchor('admin/Sarapan/hapus/'.$u->menu_sarapan_id,'<button class="btn btn-danger"><i class="icon-trash"></i></button>'); ?>
 				
@@ -104,6 +104,17 @@
 													placeholder="Nama Menu Sarapan"
 													value="<?php echo $u->nama_menu ?>">
 											</div>
+											<div class="collapse show" id="demo1">
+											<div class="form-group">
+												<label>Harga :</label>
+												<input 
+													type="number" 
+													name="harga" 
+													class="form-control" 
+													placeholder="Harga"
+													value="<?php echo $u->harga ?>">
+											</div>
+										</div>
 										</div>
 									</fieldset>
 									<div class="text-right">
