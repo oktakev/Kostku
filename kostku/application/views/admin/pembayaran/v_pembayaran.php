@@ -147,8 +147,7 @@
 
 							<div class="card-body">
 								<ul class="nav nav-tabs nav-tabs-highlight nav-justified">
-									<li class="nav-item"><a href="#highlighted-justified-tab1" class="nav-link active" data-toggle="tab">Pembayaran Kost</a></li>
-									<li class="nav-item"><a href="#highlighted-justified-tab2" class="nav-link" data-toggle="tab">Lorem Ipsum</a></li>
+									
 									
 								</ul>
 
@@ -166,88 +165,51 @@
 
 
 						<div class="card-body">
-						<table id="penghuni-table" class="table">
-							<thead>
-								<tr>
+						<table id="user-lists" class="table datatable-basic">
+						<thead>
+							<tr>
 									<th>No</th>
 									<th>Nama Penghuni</th>
-									<th>No KTP</th>
+									<th>No Hp</th>
 									<th>Alamat</th>
-									<th>Nomer Kamar</th>
-									<th>Biaya Kost</th>
-									<th>Biaya Sarapan</th>
-									<th>Pembayaran</th>
-									<th>Total Pembayaran</th>
-								</tr>
-								<td>1</td>
-								<td>Pororo</td>
-								<td>01679765443368363</td>
-								<td>Bumi Permata sudiang Blok I .10 No.6 RT 001 /RQ 010 Sudiang - Biring Kanaya makasar</td>
-								<td>01</td>
-								<td>Rp.550,000</td>
-								<td>Rp.300,000</td>
-								<td><span class="badge badge-success">Sudah Membayar</td></span>
-								<td>Rp.850,000</td>
-								<tr>
+									<th>No Kamar</th>
+									<th>Biaya kost</th>
+									<th>Periode</th>
+									<th>Tanggal Bayar</th>
+							</tr>
+						</thead>
+						<tbody>
+						<?php 
+						$no = 1;
+						foreach($query as $u){ 
+						?>
+						<tr>
+							<td><?php echo $no++ ?></td>
+							<td><?php echo $u->nama_lengkap ?></td>
+							<td><?php echo $u->no_hp ?></td>
+							<td><?php echo $u->alamat ?></td>
+							<td><?php echo $u->no_kamar ?></td>
+							<td><?php echo $this->lib->rupiah($u->biaya) ?></td>
+							<td><?php echo $u->periode ?></td>
+							<td><?php echo $this->libdate->convert($u->tanggal_bayar) ?></td>
+								<?php //echo anchor('admin/penghuni/edit/'.$u->data_penghuni_id,'<button class="btn btn-primary"><i class="icon-pencil7"></i></button>'); ?>
+
+								<?php //echo anchor('admin/lantai/hapus/'.$u->data_lantai_id,'<button class="btn btn-danger"><i class="icon-trash"></i></button>'); ?>
+								
+								
+							</td>
+						</tr>
+						<?php } ?>
 									
-								<td>2</td>
-								<td>Oktakev</td>
-								<td>29172905443368363</td>
-								<td>Jl Sadar No 16 RT 009 RW 004 Petojo Utara Gambir Jakarta Pusat</td>
-								<td>02</td>
-								<td>Rp.550,000</td>
-								<td>Rp.300,000</td>
-								<td><span class="badge badge-success">Sudah Membayar</td></span>
-								<td>Rp.850,000</td>
-								</tr>
-								<tr class="bg-danger odd">
-								<td><b>3</td>
-								<td><b>Paansi</td>
-								<td><b>99172905443362341</td>
-								<td><b>jalan jalan ke</td>
-								<td><b>03</td>
-								<td><b>Rp.550,000</td>
-								<td align="center"><b>-</td>
-								<td><span class="badge badge-success">Sudah Membayar</td></span>
-								<td><b>Rp.550,000</td>
-								</tr>
-							</thead>
-						
-						</table>
+														
+						</tbody>
+					</table>
 						</div>
 					</div>
 				</div>
 									</div>
 
-									<div class="tab-pane fade" id="highlighted-justified-tab2">
-										<div class="col-md-12" id="daftar-pengeluaran">
-					<div class="card">
-						<div class="card-header bg-transparent header-elements-inline">
-							<h6 class="card-title font-weight-semibold">Daftar Pengeluaran Sampai Dengan Tanggal -  <span class="tgl_in_header"></span></h6>
-
-							<div class="header-elements">
-								<!-- <button>Simpan Data Pembukuan</button> -->
-							</div>
-						</div>
-
-
-						<div class="card-body">
-						<table id="pengeluaran-table" class="table">
-							<thead>
-								<tr>
-									<th>No</th>
-									<th>Status</th>
-									<th>Keterangan</th>
-									<th>Biaya</th>
-									<th>Tanggal Pengeluaran</th>
-									<th></th>
-								</tr>
-							</thead>
-						
-						</table>
-						</div>
-					</div>
-				</div>
+									
 									</div>
 
 									

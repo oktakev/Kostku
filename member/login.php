@@ -11,15 +11,15 @@ $input = json_decode($inputJSON, TRUE); //convert JSON into array
 if(isset($input['username']) && isset($input['password'])){
 	$username = $input['username'];
 	$password = $input['password'];
-	$query    = "SELECT full_name,password_hash, salt FROM member WHERE username = ?";
+	$query    = "SELECT password FROM member WHERE username = ?";
 
 	if($stmt = $con->prepare($query)){
 		$stmt->bind_param("s",$username);
 		$stmt->execute();
-		$stmt->bind_result($fullName,$passwordHashDB,$salt);
+		$stmt->bind_result($username);
 		if($stmt->fetch()){
 			//Validate the password
-			if(password_verify(concatPasswordWithSalt($password,$salt),$passwordHashDB)){
+			if(password_verify($password)){
 				$response["status"] = 0;
 				$response["message"] = "Login Berhasil";
 				$response["full_name"] = $fullName;

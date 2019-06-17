@@ -94,7 +94,7 @@
 										</span>
 
 										<input 
-										type="text" 
+										type="date" 
 										class="form-control daterange-single" 
 										required="" 
 										name="tanggal"
