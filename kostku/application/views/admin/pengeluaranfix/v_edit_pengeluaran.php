@@ -83,7 +83,7 @@
 					<div class="tab-content card card-body border-top-0 rounded-top-0 mb-0">
 					<div class="tab-pane fade show active" id="bordered-tab1">				
 					<div class="card-body">
-									<form action="<?php echo base_url(). 'admin/PengeluaranFix/tambah_aksi'; ?>" method="post">
+									<form action="<?php echo base_url(). 'admin/PengeluaranFix/update'; ?>" method="post">
 									<fieldset>
 										<legend class="font-weight-semibold text-uppercase font-size-sm">
 											<i class="icon-reading mr-2"></i>
@@ -117,7 +117,7 @@
 										</div>
 									</fieldset>
 									<div class="text-right">
-										 <button type="button" class="btn btn-primary">Tambah<i class="icon-paperplane ml-2"></i></button>
+										 <button type="button" class="btn btn-primary">Update<i class="icon-paperplane ml-2"></i></button>
 
 										 <a href=""><button type="submit" class="btn btn-default">Cancel <i class="icon-arrow-left8 ml-2"></i></button></a>
 									</div>

@@ -28,6 +28,29 @@ class Fasilitas extends CI_Controller{
 	$data['fasilitas'] = $this->m_fasilitas->edit_data($where,'fasilitas')->result();
 	$this->load->view('admin/fasilitas/v_edit_fasilitas',$data);
 	}
+
+	function update(){
+	$id = $this->input->post('fasilitas_id');
+	$nama_lantai = $this->input->post('nama_fasilitas');
+	
+	$data = array(
+		'nama_fasilitas' => $nama_fasilitas
+	);
+
+	$where = array(
+		'fasilitas_id' => $id
+	);
+
+	$this->m_fasilitas->update_data($where,$data,'fasilitas');
+	redirect('admin/fasilitas/index');
+	
+	
+	function hapus($id){
+		$where = array('fasilitas_id' => $id);
+		$this->m_fasilitas->hapus_data($where,'fasilitas');
+		redirect('admin/fasilitas/index');
+	}
+}
 	
 	function hapus($id){
 		$where = array('fasilitas_id' => $id);

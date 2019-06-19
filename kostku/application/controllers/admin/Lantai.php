@@ -44,6 +44,7 @@ class Lantai extends CI_Controller{
 	$this->m_lantai->update_data($where,$data,'lantai');
 	redirect('admin/lantai/index');
 	
+	
 	function hapus($id){
 		$where = array('data_lantai_id' => $id);
 		$this->m_lantai->hapus_data($where,'lantai');

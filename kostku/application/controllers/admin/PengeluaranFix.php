@@ -33,6 +33,29 @@ class PengeluaranFix extends CI_Controller{
 	$this->load->view('admin/pengeluaranfix/v_edit_pengeluaran',$data);
 	}
 	
+	function update(){
+	$id = $this->input->post('fix_id');
+	$nama_pengeluaran = $this->input->post('nama_pengeluaran');
+	
+	$data = array(
+		'nama_pengeluaran' => $nama_pengeluaran,
+		'biaya' => $biaya
+	);
+
+	$where = array(
+		'fix_id' => $id
+	);
+
+	$this->m_pfix->update_data($where,$data,'pengeluaran_fix');
+	redirect('admin/PengeluaranFix/index');
+
+function hapus($id){
+		$where = array('fix_id' => $id);
+		$this->M_pfix->hapus_data($where,'pengeluaran_fix');
+		redirect('admin/PengeluaranFix/index');
+	}
+}
+
 	function hapus($id){
 		$where = array('fix_id' => $id);
 		$this->M_pfix->hapus_data($where,'pengeluaran_fix');
