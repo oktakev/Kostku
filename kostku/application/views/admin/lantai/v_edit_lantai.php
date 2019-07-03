@@ -54,30 +54,9 @@
 			<td>
 				<?php //echo anchor('admin/lantai/edit/'.$u->data_lantai_id,'<button class="btn btn-primary"><i class="icon-pencil7"></i></button>'); ?>
 
-				<button onclick="deleteme(<?php echo('admin/lantai/hapus/'.$u->data_lantai_id); ?>)" class="btn btn-danger">Delete</a></button>
+				<?php echo anchor('admin/lantai/edit/'.$u->data_lantai_id,'<button class="btn btn-danger"><i class="icon-trash"></i></button>'); ?>
 
-				<!--js function delete-->
-                            <script language="javascript">
-                                 function deleteme(id){
-                                  swal({
-                                  title: "Are you sure?",
-                                  text: "you will not be able to recover this imaginary file!",
-                                  icon: "warning",
-                                  buttons: true,
-                                  dangerMode: true,
-                                })
-                                .then((willDelete) => {
-                                  if (willDelete) {
-                                     swal("Poof! Your imaginary file has been deleted!", {
-                                        icon: "success",
-                                        }).then((ok) => {
-                                    window.location = 'system/delete_materi.php?id='+id
-                                     })
-                                  } else {
-                                    swal("Delete cancelled");
-                                  }
-                                })};
-                            </script>
+				
 				
 				
 			</td>
