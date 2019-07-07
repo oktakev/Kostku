@@ -29,7 +29,7 @@ class Lantai extends CI_Controller{
 	$this->load->view('admin/lantai/v_edit_lantai',$data);
 	}
 
-		function update(){
+	function update(){
 	$id = $this->input->post('data_lantai_id');
 	$nama_lantai = $this->input->post('nama_lantai');
 	

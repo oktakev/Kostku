@@ -34,8 +34,9 @@ class PengeluaranFix extends CI_Controller{
 	}
 	
 	function update(){
-	$id = $this->input->post('fix_id');
+	$id = $this->input->post('id');
 	$nama_pengeluaran = $this->input->post('nama_pengeluaran');
+	$biaya = $this->input->post('biaya');
 	
 	$data = array(
 		'nama_pengeluaran' => $nama_pengeluaran,
@@ -46,7 +47,7 @@ class PengeluaranFix extends CI_Controller{
 		'fix_id' => $id
 	);
 
-	$this->m_pfix->update_data($where,$data,'pengeluaran_fix');
+	$this->M_pfix->update_data($where,$data,'pengeluaran_fix');
 	redirect('admin/PengeluaranFix/index');
 
 function hapus($id){

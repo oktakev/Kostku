@@ -54,7 +54,7 @@
 			<td><?php echo $u->nama_pengeluaran ?></td>
 			<td><?php echo $u->biaya ?></td>	
 			<td>
-				<?php echo anchor('admin/PengeluaranFix/edit/'.$u->fix_id,'<button class="btn btn-primary"><i class="icon-pencil7"></i></button>'); ?>
+				<?php //echo anchor('admin/PengeluaranFix/edit/'.$u->fix_id,'<button class="btn btn-primary"><i class="icon-pencil7"></i></button>'); ?>
 
 				<?php echo anchor('admin/PengeluaranFix/hapus/'.$u->fix_id,'<button class="btn btn-danger"><i class="icon-trash"></i></button>'); ?>
 				
@@ -93,10 +93,10 @@
 											</a>
 										</legend>
 
+										<input type="hidden" name="id" value="<?php echo $u->fix_id ?>">
 										<div class="collapse show" id="demo1">
 											<div class="form-group">
 												<label>Nama Pengeluaran:</label>
-												<input type="hidden" name="id" value="<?php echo $u->fix_id ?>">
 												<input 
 													type="text" 
 													name="nama_pengeluaran" 
@@ -104,20 +104,21 @@
 													placeholder="Nama Pengeluaran"
 													value="<?php echo $u->nama_pengeluaran ?>">
 											</div>
+											<div class="collapse show" id="demo1">
 											<div class="form-group">
-												<label>Nama Biaya:</label>
-												<input type="hidden" name="id" value="<?php echo $u->fix_id ?>">
+												<label>Biaya :</label>
 												<input 
-													type="text" 
+													type="number" 
 													name="biaya" 
 													class="form-control" 
-													placeholder="Biaya Pengeluaran"
+													placeholder="Biaya"
 													value="<?php echo $u->biaya ?>">
 											</div>
 										</div>
+										</div>
 									</fieldset>
 									<div class="text-right">
-										 <button type="button" class="btn btn-primary">Update<i class="icon-paperplane ml-2"></i></button>
+										 <button type="submit" class="btn btn-primary">Update<i class="icon-paperplane ml-2"></i></button>
 
 										 <a href=""><button type="submit" class="btn btn-default">Cancel <i class="icon-arrow-left8 ml-2"></i></button></a>
 									</div>
