@@ -96,7 +96,7 @@
 										<div class="collapse show" id="demo1">
 											<div class="form-group">
 												<label>Nama Pengeluaran:</label>
-												<input type="hidden" name="id" value="<?php echo $u->fix_id ?>">
+												<input type="hidden" name="fix_id" value="<?php echo $u->fix_id ?>">
 												<input 
 													type="text" 
 													name="nama_pengeluaran" 
@@ -106,7 +106,6 @@
 											</div>
 											<div class="form-group">
 												<label>Nama Biaya:</label>
-												<input type="hidden" name="id" value="<?php echo $u->fix_id ?>">
 												<input 
 													type="text" 
 													name="biaya" 
@@ -117,7 +116,7 @@
 										</div>
 									</fieldset>
 									<div class="text-right">
-										 <button type="button" class="btn btn-primary">Update<i class="icon-paperplane ml-2"></i></button>
+										 <button type="submit" class="btn btn-primary">Update<i class="icon-paperplane ml-2"></i></button>
 
 										 <a href=""><button type="submit" class="btn btn-default">Cancel <i class="icon-arrow-left8 ml-2"></i></button></a>
 									</div>

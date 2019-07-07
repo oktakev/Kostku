@@ -94,7 +94,7 @@
 										<div class="collapse show" id="demo1">
 											<div class="form-group">
 												<label>Nama Fasilitas:</label>
-												<input type="hidden" name="id" value="<?php echo $u->fasilitas_id ?>">
+												<input type="hidden" name="fasilitas_id" value="<?php echo $u->fasilitas_id ?>">
 												<input 
 													type="text" 
 													name="nama_fasilitas" 
@@ -105,7 +105,7 @@
 										</div>
 									</fieldset>
 									<div class="text-right">
-										 <button type="button" class="btn btn-primary">Update<i class="icon-paperplane ml-2"></i></button>
+										 <button type="submit" class="btn btn-primary">Update<i class="icon-paperplane ml-2"></i></button>
 
 										 <a href=""><button type="submit" class="btn btn-default">Cancel <i class="icon-arrow-left8 ml-2"></i></button></a>
 									</div>
