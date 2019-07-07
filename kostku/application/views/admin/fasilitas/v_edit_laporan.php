@@ -98,7 +98,7 @@ enctype="multipart/form-data"
 							required="" 
 							name="nama_penghuni"
 							disabled=""
-							value="<?php echo $l->nama_lengkap?>"
+							value="<?php echo $l->username?>"
 							>
 						</div>
 

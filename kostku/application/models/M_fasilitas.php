@@ -26,11 +26,11 @@ class M_fasilitas extends CI_Model{
                             lapor_fasilitas.keluhan,
                             lapor_fasilitas.status,
                             fasilitas.nama_fasilitas,
-                            data_penghuni.nama_lengkap
+                            member.username
                             ');
         $this->db->from('lapor_fasilitas');
         $this->db->join('fasilitas','lapor_fasilitas.fasilitas_id = fasilitas.fasilitas_id');
-        $this->db->join('data_penghuni','lapor_fasilitas.data_penghuni_id = data_penghuni.data_penghuni_id');
+        $this->db->join('member','lapor_fasilitas.user_id = member.user_id');
         return $this->db->get()->result();
     }
     public function myjoinEdit($id)
@@ -40,11 +40,11 @@ class M_fasilitas extends CI_Model{
                             lapor_fasilitas.keluhan,
                             lapor_fasilitas.status,
                             fasilitas.nama_fasilitas,
-                            data_penghuni.nama_lengkap
+                            member.username
                             ');
         $this->db->from('lapor_fasilitas');
         $this->db->join('fasilitas','lapor_fasilitas.fasilitas_id = fasilitas.fasilitas_id');
-        $this->db->join('data_penghuni','lapor_fasilitas.data_penghuni_id = data_penghuni.data_penghuni_id');
+        $this->db->join('member','lapor_fasilitas.user_id = member.user_id');
         $this->db->where($id);
         return $this->db->get()->result();
     }

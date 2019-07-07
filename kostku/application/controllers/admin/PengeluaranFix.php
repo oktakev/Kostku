@@ -34,7 +34,7 @@ class PengeluaranFix extends CI_Controller{
 	}
 	
 	function update(){
-	$id = $this->input->post('fix_id');
+	$id = $this->input->post('id');
 	$nama_pengeluaran = $this->input->post('nama_pengeluaran');
 	$biaya = $this->input->post('biaya');
 

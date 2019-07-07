@@ -59,7 +59,7 @@
 						?>
 						<tr>
 							<td><?php echo $no++ ?></td>
-							<td><?php echo $l->nama_lengkap ?></td>
+							<td><?php echo $l->username ?></td>
 							<td><?php echo $l->nama_fasilitas ?></td>
 							<td><?php echo $l->keluhan ?></td>
 							<td><?php   

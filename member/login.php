@@ -11,27 +11,27 @@ $input = json_decode($inputJSON, TRUE); //convert JSON into array
 if(isset($input['username']) && isset($input['password'])){
 	$username = $input['username'];
 	$password = $input['password'];
-	$query    = "SELECT password FROM member WHERE username = ?";
+	$query    = "SELECT password_hash, salt FROM member WHERE username = ?";
 
 	if($stmt = $con->prepare($query)){
 		$stmt->bind_param("s",$username);
 		$stmt->execute();
-		$stmt->bind_result($username);
+		$stmt->bind_result($passwordHashDB,$salt);
 		if($stmt->fetch()){
 			//Validate the password
-			if(password_verify($password)){
+			if(password_verify(concatPasswordWithSalt($password,$salt),$passwordHashDB)){
 				$response["status"] = 0;
-				$response["message"] = "Login Berhasil";
-				$response["full_name"] = $fullName;
+				$response["message"] = "Login successful";
+				$response["username"] = $username;
 			}
 			else{
 				$response["status"] = 1;
-				$response["message"] = "Login Gagal";
+				$response["message"] = "Invalid username and password combination";
 			}
 		}
 		else{
 			$response["status"] = 1;
-			$response["message"] = "Login Gagal";
+			$response["message"] = "Invalid username and password combination";
 		}
 		
 		$stmt->close();
@@ -39,7 +39,7 @@ if(isset($input['username']) && isset($input['password'])){
 }
 else{
 	$response["status"] = 2;
-	$response["message"] = "404";
+	$response["message"] = "Missing mandatory parameters";
 }
 //Display the JSON response
 echo json_encode($response);

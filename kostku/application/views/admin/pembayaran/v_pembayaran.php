@@ -65,6 +65,7 @@
 										<label class="font-weight-semibold">Tahun Monitoring</label>
 
 										<select 
+										disabled="" 
 										class="form-control " 
 										data-placeholder="Tahun Pembukuan" 
 										>
@@ -97,9 +98,10 @@
 											</span>
 
 											<input 
+											disabled="" 
 											type="text" 
 											class="form-control daterange-single" 
-											value="05/29/2019" 
+											value="" 
 											required="" 
 											id="tgl_pembukuan"
 											name="tgl_masuk"

@@ -32,7 +32,6 @@
 			<div class="card-body">
 				<ul class="nav nav-tabs nav-tabs-highlight">
 					<li class="nav-item"><a href="#" class="nav-link active"  "><i class="icon-list-ordered mr-2"></i> Member</a></li>
-					<li class="nav-item"><a href="<?php echo base_url('admin/akun/tambahakun'); ?>" class="nav-link"  "><i class="icon-plus3 mr-2"></i>Buat Akun</a></li>
 
 				</ul>
 
@@ -73,9 +72,9 @@
 						<tr>
 							<td><?php echo $no++ ?></td>
 							<td><?php echo $a->username ?></td>
-							<td><?php echo $this->libdate->convert($a->tanggal) ?></td>
+							<td><?php echo $this->libdate->convert($a->created_date) ?></td>
 							<td>
-								<?php echo anchor('admin/pesan_sarapan/edit/'.$a->akun_id,'<button class="btn btn-success"><i class="icon-search4"></i></button>'); ?>
+								<?php echo anchor('admin/pesan_sarapan/edit/'.$a->user_id,'<button class="btn btn-success"><i class="icon-search4"></i></button>'); ?>
 								<?php //echo anchor('admin/pesan_sarapan/edit/'.$u->pesan_sarapan_id,'<button class="btn btn-primary"><i class="icon-pencil7"></i></button>'); ?>
 
 								<?php //echo anchor('admin/lantai/hapus/'.$u->data_lantai_id,'<button class="btn btn-danger"><i class="icon-trash"></i></button>'); ?>
