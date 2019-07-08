@@ -37,7 +37,7 @@ class PengeluaranFix extends CI_Controller{
 	$id = $this->input->post('id');
 	$nama_pengeluaran = $this->input->post('nama_pengeluaran');
 	$biaya = $this->input->post('biaya');
-	
+
 	$data = array(
 		'nama_pengeluaran' => $nama_pengeluaran,
 		'biaya' => $biaya

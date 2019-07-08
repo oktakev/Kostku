@@ -97,6 +97,8 @@
 										<div class="collapse show" id="demo1">
 											<div class="form-group">
 												<label>Nama Pengeluaran:</label>
+												<input type="hidden" name="fix_id" value="<?php echo $u->fix_id ?>">
+
 												<input 
 													type="text" 
 													name="nama_pengeluaran" 
@@ -106,6 +108,8 @@
 											</div>
 											<div class="collapse show" id="demo1">
 											<div class="form-group">
+
+												<label>Nama Biaya:</label>
 												<label>Biaya :</label>
 												<input 
 													type="number" 

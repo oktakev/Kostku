@@ -31,7 +31,7 @@ class Fasilitas extends CI_Controller{
 
 	function update(){
 	$id = $this->input->post('fasilitas_id');
-	$nama_lantai = $this->input->post('nama_fasilitas');
+	$nama_fasilitas = $this->input->post('nama_fasilitas');
 	
 	$data = array(
 		'nama_fasilitas' => $nama_fasilitas
