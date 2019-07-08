@@ -73,8 +73,10 @@
 							<td><?php echo $no++ ?></td>
 							<td><?php echo $a->username ?></td>
 							<td><?php echo $this->libdate->convert($a->created_date) ?></td>
+							<td><a href="<?php echo base_url('admin/Penghuni'); ?>">Detail</a></td>
+
 							<td>
-								<?php echo anchor('admin/pesan_sarapan/edit/'.$a->user_id,'<button class="btn btn-success"><i class="icon-search4"></i></button>'); ?>
+								<?php //echo anchor('admin/penghuni/edit/'.$a->user_id,'<button class="btn btn-success"><i class="icon-search4"></i></button>'); ?>
 								<?php //echo anchor('admin/pesan_sarapan/edit/'.$u->pesan_sarapan_id,'<button class="btn btn-primary"><i class="icon-pencil7"></i></button>'); ?>
 
 								<?php //echo anchor('admin/lantai/hapus/'.$u->data_lantai_id,'<button class="btn btn-danger"><i class="icon-trash"></i></button>'); ?>
@@ -95,7 +97,7 @@
 
 		</div>
 		
-				<div class="col-md-7">
+				<!-- <div class="col-md-7">
 				<div class="card">
 					<div class="card-header bg-transparent header-elements-inline">
 						<h6 class="card-title">Detail Member</h6>
@@ -127,7 +129,7 @@
 									
 														
 						</tbody>
-					</table>
+					</table>-->
 		<!--<div class="col-md-6">
 				<div class="card">
 					<ul class="nav nav-tabs nav-tabs-highlight mb-0">
