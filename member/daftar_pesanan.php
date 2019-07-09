@@ -1,7 +1,9 @@
 <?php
+		$nama_pemesan = $_GET["nama_pemesan"];
 	require_once 'db/db_connect.php';
 
-	$query = "SELECT pesan_sarapan.pesan_sarapan_id,data_penghuni.nama_lengkap,kamar.no_kamar,menu_sarapan.nama_menu,pesan_sarapan.tanggal,pesan_sarapan.status FROM pesan_sarapan JOIN data_penghuni ON pesan_sarapan.data_penghuni_id = data_penghuni.data_penghuni_id JOIN kamar ON pesan_sarapan.data_kamar_id = kamar.data_kamar_id JOIN menu_sarapan ON pesan_sarapan.menu_sarapan_id = menu_sarapan.menu_sarapan_id";
+
+	$query = "SELECT pesan_sarapan.pesan_sarapan_id,data_penghuni.nama_lengkap,kamar.no_kamar,menu_sarapan.nama_menu,pesan_sarapan.tanggal,pesan_sarapan.status FROM pesan_sarapan JOIN data_penghuni ON pesan_sarapan.data_penghuni_id = data_penghuni.data_penghuni_id JOIN kamar ON pesan_sarapan.data_kamar_id = kamar.data_kamar_id JOIN menu_sarapan ON pesan_sarapan.menu_sarapan_id = menu_sarapan.menu_sarapan_id where nama_lengkap='$nama_pemesan'";
 
 	$sql = mysqli_query($con, $query);
 

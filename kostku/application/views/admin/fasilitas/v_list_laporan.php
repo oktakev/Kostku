@@ -45,7 +45,6 @@
 						<thead>
 							<tr>
 								<th>No</th>
-								<th>Nama Pelapor</th>
 								<th>Nama Fasilitas</th>
 								<th width="50px">Keluhan Pelapor</th>
 								<th width="50px">Status</th>
@@ -59,7 +58,6 @@
 						?>
 						<tr>
 							<td><?php echo $no++ ?></td>
-							<td><?php echo $l->username ?></td>
 							<td><?php echo $l->nama_fasilitas ?></td>
 							<td><?php echo $l->keluhan ?></td>
 							<td><?php   
