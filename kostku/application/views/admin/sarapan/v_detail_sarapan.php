@@ -71,7 +71,7 @@ enctype="multipart/form-data"
 							<i class="icon-circle-down2"></i>
 						</a>
 					</legend>
-					<input type="hidden" name="detail_id" value="<?php echo $l->detail_id ?>">
+					<input type="hidden" name="pesan_sarapan_id" value="<?php echo $l->pesan_sarapan_id ?>">
 					<div class="collapse show" id="demo1">
 						<div class="form-group">
 							<label>Nama Pemesan</label>
@@ -106,7 +106,7 @@ enctype="multipart/form-data"
 							<i class="icon-circle-down2"></i>
 						</a>
 					</legend>
-					<input type="hidden" name="detail_id" value="<?php echo $l->detail_id ?>">
+					<input type="hidden" name="pesan_sarapan_id" value="<?php echo $l->pesan_sarapan_id ?>">
 					<div class="collapse show" id="demo1">
 						<div class="form-group">
 						

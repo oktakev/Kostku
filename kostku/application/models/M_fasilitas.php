@@ -26,11 +26,9 @@ class M_fasilitas extends CI_Model{
                             lapor_fasilitas.keluhan,
                             lapor_fasilitas.status,
                             fasilitas.nama_fasilitas,
-                            member.username
                             ');
         $this->db->from('lapor_fasilitas');
         $this->db->join('fasilitas','lapor_fasilitas.fasilitas_id = fasilitas.fasilitas_id');
-        $this->db->join('member','lapor_fasilitas.user_id = member.user_id');
         return $this->db->get()->result();
     }
     public function myjoinEdit($id)
