@@ -212,10 +212,6 @@
 
 					<div class="dropdown-menu dropdown-menu-right">
 						<a href="<?php echo base_url('admin/akun'); ?>" class="dropdown-item"><i class="icon-user-lock"></i> Account Member</a>
-						<a href="#" class="dropdown-item"><i class="icon-statistics"></i> Analytics</a>
-						<a href="#" class="dropdown-item"><i class="icon-accessibility"></i> Accessibility</a>
-						<div class="dropdown-divider"></div>
-						<a href="#" class="dropdown-item"><i class="icon-gear"></i> All settings</a>
 					</div>
 				</li>
 			</ul>

@@ -90,10 +90,12 @@ enctype="multipart/form-data"
 							<i class="icon-circle-down2"></i>
 						</a>
 					</legend>
-					<input type="hidden" name="id" value="<?php echo $u->data_penghuni_id ?>">
+					<input type="hidden" name="data_penghuni_id" value="<?php echo $u->data_penghuni_id ?>">
 					<div class="collapse show" id="demo1">
 						<div class="form-group">
 							<label>Nama Penghuni:</label>
+							<input type="hidden" name="data_penghuni_id" value="<?php echo $u->data_penghuni_id ?>">
+
 							<input 
 							type="text" 
 							class="form-control" 

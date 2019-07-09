@@ -42,8 +42,8 @@ class Penghuni extends CI_Controller{
 	redirect('admin/penghuni/index');
 }
 	function hapus($id){
-		$where = array('data_kamar_id' => $id);
-		$this->m_kamar->hapus_data($where,'kamar');
-		redirect('admin/kamar/index');
+		$where = array('data_penghuni_id' => $id);
+		$this->m_penghuni->hapus_data($where,'data_penghuni');
+		redirect('admin/penghuni/index');
 	}
 }

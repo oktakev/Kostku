@@ -35,5 +35,6 @@ class M_penghuni extends CI_Model{
         $this->db->join('pengaturan_biaya','data_penghuni.biaya_kost_id = pengaturan_biaya.biaya_kost_id');
         $this->db->where($id);
         return $this->db->get()->result();
-    }       
+    }
+    
 }
