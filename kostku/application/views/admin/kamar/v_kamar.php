@@ -104,8 +104,8 @@
 										<legend class="font-weight-semibold text-uppercase font-size-sm">
 											<i class="icon-reading mr-2"></i>
 											Kamar Form
-											<a class="float-right text-default" data-toggle="collapse" data-target="#demo2">
-												<i class="icon-circle-down2"></i>
+											<a href="#" class="float-right text-default" data-toggle="collapse" data-target="#demo1">
+											<i class="icon-circle-down2"></i>
 											</a>
 										</legend>
 
@@ -120,7 +120,7 @@
 										            ?>
 										            </select>
 											</div>
-										</div>
+										
 
 											<div class="form-group">
 												<label>Nomor Kamar:</label>

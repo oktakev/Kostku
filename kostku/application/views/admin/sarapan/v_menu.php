@@ -110,9 +110,9 @@
 										<legend class="font-weight-semibold text-uppercase font-size-sm">
 											<i class="icon-file-plus mr-2"></i>
 											Tambah Menu
-											<a class="float-right text-default" data-toggle="collapse" data-target="#demo2">
-												<i class="icon-circle-down2"></i>
-											</a>
+											<a href="#" class="float-right text-default" data-toggle="collapse" data-target="#demo1">
+							<i class="icon-circle-down2"></i>
+						</a>
 										</legend>
 
 										<div class="collapse show" id="demo1">

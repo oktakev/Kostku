@@ -52,7 +52,7 @@
 			<td><?php echo $no++ ?></td>
 			<td><?php echo $u->nama_fasilitas ?></td>
 			<td>
-				<?php echo anchor('admin/fasilitas/edit/'.$u->fasilitas_id,'<button class="btn btn-primary"><i class="icon-pencil7"></i></button>'); ?>
+				<?php //echo anchor('admin/fasilitas/edit/'.$u->fasilitas_id,'<button class="btn btn-primary"><i class="icon-pencil7"></i></button>'); ?>
 
 				<?php echo anchor('admin/fasilitas/hapus/'.$u->fasilitas_id,'<button class="btn btn-danger"><i class="icon-trash"></i></button>'); ?>
 				
@@ -86,7 +86,7 @@
 										<legend class="font-weight-semibold text-uppercase font-size-sm">
 											<i class="icon-reading mr-2"></i>
 											Fasilitas Form
-											<a class="float-right text-default" data-toggle="collapse" data-target="#demo2">
+											<a href="#" class="float-right text-default" data-toggle="collapse" data-target="#demo1">
 												<i class="icon-circle-down2"></i>
 											</a>
 										</legend>

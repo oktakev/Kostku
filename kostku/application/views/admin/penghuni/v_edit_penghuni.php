@@ -81,7 +81,7 @@ enctype="multipart/form-data"
 			</div>
 			
 			<div class="card-body">
-				
+				<form action="<?php echo base_url(). 'admin/penghuni/update'; ?>" method="post">
 				<fieldset>
 					<legend class="font-weight-semibold text-uppercase font-size-sm">
 						<i class="icon-file-text2 mr-2"></i>
@@ -147,7 +147,7 @@ enctype="multipart/form-data"
 				
 
 				<div class="text-left">
-					<button type="button" class="btn btn-primary">Submit Data <i class="icon-paperplane ml-2"></i></button>
+					<button type="Submit" class="btn btn-primary">Submit Data <i class="icon-paperplane ml-2"></i></button>
 				</div>
 
 			</div>

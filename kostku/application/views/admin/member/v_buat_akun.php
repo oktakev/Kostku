@@ -93,7 +93,8 @@ enctype="multipart/form-data"
 							value=""		
 							>
 						</div>
-
+					</div>
+				</fieldset>
 						<input type="hidden" name="tanggal">
 				<div class="text-left">
 					<button type="submit" class="btn btn-primary">Submit Data <i class="icon-paperplane ml-2"></i></button>

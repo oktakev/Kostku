@@ -130,7 +130,7 @@
 														
 						</tbody>
 					</table>-->
-		<!--<div class="col-md-6">
+		<!-- <div class="col-md-6">
 				<div class="card">
 					<ul class="nav nav-tabs nav-tabs-highlight mb-0">
 						<li class="nav-item"><a href="#bordered-tab1" class="nav-link active" data-toggle="tab">
@@ -140,43 +140,52 @@
 					<div class="tab-content card card-body border-top-0 rounded-top-0 mb-0">
 					<div class="tab-pane fade show active" id="bordered-tab1">				
 					<div class="card-body">
-									<form action="<?php echo base_url(). 'admin/lantai/tambah_aksi'; ?>" method="post">
-									<fieldset>
-										<legend class="font-weight-semibold text-uppercase font-size-sm">
-											<i class="icon-file-plus mr-2"></i>
-											Tambah Menu
-											<a class="float-right text-default" data-toggle="collapse" data-target="#demo2">
-												<i class="icon-circle-down2"></i>
-											</a>
-										</legend>
+					<form action="<?php echo base_url(). 'admin/akun/tambah_aksi'; ?>" method="post">
+													
+				<fieldset>
+					<legend class="font-weight-semibold text-uppercase font-size-sm">
+						<i class="icon-file-text2 mr-2"></i>
+						buat Akun penghuni
+						<a href="#" class="float-right text-default" data-toggle="collapse" data-target="#demo1">
+							<i class="icon-circle-down2"></i>
+						</a>
+					</legend>
+					<input type="hidden" name="id" value="">
+					<div class="collapse show" id="demo1">
+						<div class="form-group">
+							<label>Username</label>
+							<input 
+							type="text" 
+							class="form-control" 
+							placeholder=""
+							required="" 
+							name="username"
+							value=""
+							>
 
-										<div class="collapse show" id="demo1">
-											<div class="form-group">
-												<label>Nama Menu:</label>
-												<input 
-													type="text" 
-													name="nama_lantai" 
-													class="form-control" 
-													placeholder="Nama Menu">
-											</div>
-											<div class="form-group">
-												<label>Harga :</label>
-												<input 
-													type="number" 
-													name="harga" 
-													class="form-control" 
-													placeholder="Harga menu">
-											</div>
-										</div>
-									</fieldset>
+						</div>
+
+						<div class="form-group">
+							<label>Password</label>
+							<input 
+							type="password" 
+							class="form-control"
+							placeholder=""
+							required="" 
+							name="password"
+							value=""		
+							>
+						</div>
+					</div>
+				</fieldset>
 									<div class="text-right">
-										  <button type="button" class="btn btn-primary">Tambah<i class="icon-paperplane ml-2"></i></button>
+										  <button type="submit" class="btn btn-primary">Tambah<i class="icon-paperplane ml-2"></i></button>
 									</div>
 								</form>
 							</div>
 									</div>
 								</div>
-							-->
+							
 
 				
 
@@ -196,9 +205,9 @@
 
 				</div>
 			</div>
-		</div>
+		</div> -->
 
-		<!-- /action toolbar -->
+		<!-- /action toolbar
 
 
 

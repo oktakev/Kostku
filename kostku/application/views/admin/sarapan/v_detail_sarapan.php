@@ -30,7 +30,7 @@
 
 			<div class="card-body">
 				<ul class="nav nav-tabs nav-tabs-highlight">
-					<li class="nav-item"><a href="<?php echo base_url('admin/Fasilitas/laporan'); ?>" class="nav-link active"><i class="icon-clipboard3 mr-2"></i> List Detail</a></li>
+					<li class="nav-item"><a href="<?php echo base_url('admin/fasilitas/laporan'); ?>" class="nav-link active"><i class="icon-clipboard3 mr-2"></i> List Detail</a></li>
 
 				</ul>
 				<div class="tab-content">

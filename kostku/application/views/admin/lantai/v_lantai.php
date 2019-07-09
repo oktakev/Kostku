@@ -85,7 +85,7 @@
 										<legend class="font-weight-semibold text-uppercase font-size-sm">
 											<i class="icon-reading mr-2"></i>
 											Lantai Form
-											<a class="float-right text-default" data-toggle="collapse" data-target="#demo2">
+											<a href="#" class="float-right text-default" data-toggle="collapse" data-target="#demo1">
 												<i class="icon-circle-down2"></i>
 											</a>
 										</legend>
