@@ -66,8 +66,6 @@
                                 <button type="submit" class="btn btn-primary btn-block">Login<i class="icon-circle-right2 ml-2 ml-2"></i></button>
                             </div>
                         <div class="form-group">
-                                <b>Username: admin</b> <br/>
-                                <b>Password: admin</b>
                             </div>
                             
                           

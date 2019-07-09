@@ -94,40 +94,6 @@
 					
 
 		</div>
-		
-				<div class="col-md-7">
-				<div class="card">
-					<div class="card-header bg-transparent header-elements-inline">
-						<h6 class="card-title">Detail Member</h6>
-
-						<div class="header-elements">
-						
-	                	</div>
-					</div>
-				<table id="user-lists" class="table datatable-basic">
-						<thead>
-							<tr>
-								<th>Nama Penghuni</th>
-								<th>Nomor Kamar</th>
-								<th>Alamat</th>
-								<th>Nomor Hp</th>
-								<th>Action</th>
-							</tr>
-						</thead>
-						<tbody>
-						
-						<tr>
-							<td>Oktakev</td>
-							<td>02</td>
-							<td>Jl Sadar No 16 RT 009 RW 004 Petojo Utara Gambir Jakarta Pusat</td>
-							<td>089123123123</td>
-							<td><a href="<?php echo base_url('admin/Penghuni'); ?>">Detail</a></td>			
-						</tr>
-					
-									
-														
-						</tbody>
-					</table>
 		<!--<div class="col-md-6">
 				<div class="card">
 					<ul class="nav nav-tabs nav-tabs-highlight mb-0">
