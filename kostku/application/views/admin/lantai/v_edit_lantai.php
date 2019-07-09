@@ -54,7 +54,7 @@
 			<td>
 				<?php //echo anchor('admin/lantai/edit/'.$u->data_lantai_id,'<button class="btn btn-primary"><i class="icon-pencil7"></i></button>'); ?>
 
-				<?php echo anchor('admin/lantai/edit/'.$u->data_lantai_id,'<button class="btn btn-danger"><i class="icon-trash"></i></button>'); ?>
+				<?php echo anchor('admin/lantai/hapus/'.$u->data_lantai_id,'<button class="btn btn-danger"><i class="icon-trash"></i></button>'); ?>
 
 				
 				
@@ -107,7 +107,7 @@
 										</div>
 									</fieldset>
 									<div class="text-right">
-										 <button type="button" class="btn btn-primary">Update<i class="icon-paperplane ml-2"></i></button>
+										 <button type="Submit" class="btn btn-primary">Update<i class="icon-paperplane ml-2"></i></button>
 
 										 <button type="Submit" class="btn btn-default">Cancel <i class="icon-arrow-left8 ml-2"></i></button></a>
 									</div>

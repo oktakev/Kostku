@@ -93,7 +93,7 @@
 											</a>
 										</legend>
 
-												<input type="hidden" name="id" value="<?php echo $u->menu_sarapan_id ?>">
+										<input type="hidden" name="id" value="<?php echo $u->menu_sarapan_id ?>">
 										<div class="collapse show" id="demo1">
 											<div class="form-group">
 												<label>Nama Menu:</label>
